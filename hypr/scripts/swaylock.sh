@@ -1,9 +1,6 @@
-#!/bin/sh
-# Times the screen off and puts it to background
-swayidle \
-    timeout 1 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"' &
-# Locks the screen immediately
-swaylock -c 550000
-# Kills last background task so idle timer doesn't keep running
-kill %%
+#!/bin/bash
+
+pkill xautolock
+
+xautolock -time 10 -locker "swaylock -i ~/.cache/current.png" -notify 30 -notifier "notify-send 'Screen will be locked soon.' 'Locking screen in 30 seconds'"
+
