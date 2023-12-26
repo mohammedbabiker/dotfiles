@@ -36,13 +36,3 @@ datestr=%a, %B %e
 timestr=%R
 fade-in=0.2
 ignore-empty-password
-
-set $lock swaylock -c 550000
-exec swayidle -w \
-    timeout 600 $lock \
-    timeout 570 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"' \
-    before-sleep $lock
-
-set $lockman exec bash ~/.config/sway/lockman.sh
-bindsym $mod+l exec $lockman
