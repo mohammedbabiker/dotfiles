@@ -127,6 +127,10 @@ window#waybar {
 	background-color: #b8bb26;
 }
 
+#pulseaudio.microphone {
+	font-size: 15px;
+}
+
 #backlight-slider slider {
 	min-width: 0px;
 	min-height: 0px;

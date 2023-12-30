@@ -31,7 +31,7 @@
 		"tooltip": false
 	},
 	"clock": {
-		"format": "{:%H:%M - %d/%b}",
+		"format": "{:%H:%M}",
 		"tooltip": false
 	}
 }

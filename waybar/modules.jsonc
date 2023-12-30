@@ -717,7 +717,7 @@
     "custom/power_vertical": {
         "format": "⏻",
         "tooltip": false,
-        "on-click": "~/.config/hypr/scripts/RofiPower.sh",
-        "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh"
+        // "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh",
+        "on-click": "~/.config/hypr/scripts/RofiPower.sh"
     }
 }
