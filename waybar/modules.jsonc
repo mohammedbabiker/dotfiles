@@ -321,9 +321,10 @@
     },
     "idle_inhibitor": {
         "format": "{icon}",
-        "format-icons": {
-            "activated": " ",
-            "deactivated": " "
+        "tooltip": false,
+        "format-icons":{
+            "activated": "OFF",
+            "deactivated": "ON"
         }
     },
     "keyboard-state": {
