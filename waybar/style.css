@@ -152,3 +152,15 @@ window#waybar {
 	border-radius: 5px;
 	background-color: #b8bb26;
 }
+
+#idle_inhibitor {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#idle_inhibitor.activated {
+    font-size: 14px;
+    color:#e2974c;
+	min-height: 0px;
+	min-width: 0px;
+}
