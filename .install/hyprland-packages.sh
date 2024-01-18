@@ -11,5 +11,6 @@ packagesPacman=(
 packagesYay=( 
     "swaylock-effects-git" 
     "wlogout"
+    "wlr-randr"
 );
 

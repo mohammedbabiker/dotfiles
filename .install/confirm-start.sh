@@ -1,7 +1,7 @@
 # Confirm start
 
 echo "IMPORTANT: Make sure that your system and your packages are up to date (sudo pacman -Syu or yay)."
-echo "You can cancel the installation at any time with CTRL + C"
+echo "You can cancel the installation with CTRL + C"
 echo "If you have already installed a window manager like sway, please backup your .config folder."
 SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")

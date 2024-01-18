@@ -26,7 +26,7 @@ echo "backup"
         fi
         if [ -d ~/dotfiles ]; then
             rsync -a ~/mohmd-Hyprland-Dotfile/ ~/mohmd-Hyprland-Dotfile-backup/backups/$datets/
-            echo "Backup of your current dotfiles in ~/mohmd-Hyprland-Dotfile-backup/backups/$datets created."
+            echo "Backup of your current files in ~/mohmd-Hyprland-Dotfile-backup/backups/$datets created."
         fi
         if [ -f ~/.bashrc ]; then
             cp ~/.bashrc ~/mohmd-Hyprland-Dotfile-backup/backups/$datets/.bashrc-old
