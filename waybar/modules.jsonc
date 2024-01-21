@@ -109,7 +109,7 @@
         "sort-by-number": true,
         "format-icons": {
             "1": " ",
-            "2": " ",
+            "2": "  ",
             "3": " ",
             "4": " ",
             "5": " ",
@@ -199,8 +199,8 @@
         "format-time": "{H}h {M}min",
         "tooltip": true,
         // "tooltip-format": "{timeTo} {power}w",
-        "on-click-middle": "~/.config/hypr/scripts/ChangeBlur.sh",
-        "on-click-right": "~/.config/hypr/scripts/RofiPower.sh"
+        "on-click-middle": "",
+        "on-click-right": ""
     },
     "bluetooth": {
         "format": "",
@@ -361,7 +361,7 @@
         "player-icons": {
             "chromium": "",
             "default": "",
-            "firefox": "",
+            "firefox": " ",
             "kdeconnect": "",
             "mopidy": "",
             "mpv": "󰐹",
@@ -558,7 +558,7 @@
         "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh"
     },
     "custom/updater": {
-        "format": " {}",
+        "format": " {}",
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) ]]",
         "interval": 15,
