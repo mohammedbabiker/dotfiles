@@ -20,9 +20,12 @@ alias vi='nvim'
 alias ga="git add"
 alias gl="git pull"
 alias gp="git push"
-alias gst="git status"
 alias gc="git commit"
+alias gst="git status"
 alias glo="git log --oneline"
+alias glg="git log --graph"
+
+source /usr/share/doc/pkgfile/command-not-found.bash
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
