@@ -8,6 +8,7 @@
 	"margin-top": 2,
 	"modules-left": [
 		"custom/menu",
+    "custom/github",
 		"mpris",
 		"hyprland/window"
 	],

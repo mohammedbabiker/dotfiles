@@ -538,6 +538,11 @@
         "on-click-middle": "~/.config/hypr/scripts/WallpaperSelect.sh",
         "on-click-right": "~/.config/hypr/scripts/WaybarLayout.sh"
     },
+    "custom/github": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "firefox https://github.com/mohammedbabiker?tab=repositories"
+    },
     "custom/playerctl": {
         "format": "<span>{}</span>",
         "return-type": "json",
