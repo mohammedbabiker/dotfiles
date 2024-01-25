@@ -10,7 +10,7 @@
     progress_bar_frame_width = 1
     progress_bar_min_width = 150
     progress_bar_max_width = 400
-    progress_bar_corner_radius = 5
+    progress_bar_corner_radius = 4
 
     indicate_hidden = yes
     shrink = no
@@ -18,7 +18,7 @@
     padding = 15
     horizontal_padding = 15
     text_icon_padding = 20
-    frame_width = 2
+    frame_width = 1
     frame_color = "#9399b2"
     corner_radius = 10
     separator_color = frame
@@ -41,7 +41,7 @@
     icon_position = left
     min_icon_size = 48
     max_icon_size = 48
-    icon_path = /home/eric/.local/share/icons/dunst
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
     sticky_history = yes
     history_length = 20
     always_run_script = true
