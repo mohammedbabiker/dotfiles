@@ -19,7 +19,7 @@
 	"modules-right": [
 		"tray",
 		"actions",
-		"pulseaudio",
+		// "pulseaudio",
 		"pulseaudio#microphone",
 		"clock",
 		"group/laptop",
