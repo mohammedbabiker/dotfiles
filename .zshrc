@@ -9,6 +9,8 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+# ZSH_THEME="norm"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -98,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="mate ~/.zshrc"
 alias v="neovim"
+alias p="sduo pacman"
 alias  l='eza -lh  --icons=auto'
 # alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
