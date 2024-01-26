@@ -47,7 +47,7 @@ ENABLE_CORRECTION="true"
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# Caution: this setting can cause issues with multiline prompts in zsh < 6.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -71,7 +71,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,8 +99,11 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="mate ~/.zshrc"
-alias v="neovim"
-alias p="sduo pacman"
+alias v="nvim"
+alias p="sudo pacman"
+# alias cluc="sudo pacman -Qtdq && sudo pacman -R $(sudo pacman -Qtdq)"
+alias glz="lazygit"
+alias gf="git diff"
 alias  l='eza -lh  --icons=auto'
 # alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
