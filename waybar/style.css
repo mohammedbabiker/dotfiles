@@ -1,35 +1,33 @@
 * {
-	background: #1d2021;
-	border: none;
-	border-radius: 0;
 	font-family: "JetBrainsMono Nerd Font";
 	font-size: 16px;
-	/* opacity: 0.8; */
+	min-height: 0px;
 }
 
 window#waybar {
-	background: #1d2021;
-	color: #928374;
-	transition-property: background-color;
+	background: transparent;
 	transition-duration: 0.5s;
-	/* opacity: 0.8; */
 }
 
 #workspaces button {
 	padding: 0 10px;
-	color: #928374;
+	color: #a79b8f;
 }
 
 #workspaces button.active {
-	border-bottom: 1px solid #b8bb26;
+	color: #a79b8f;
+}
+
+#workspaces button:hover {
+	background-color: transparent;
 }
 
 #workspaces button.urgent {
-	border-bottom: 2px solid #fabd2f;
+	border-bottom: 2px solid #ffcc00;
 }
 
 #submap {
-	border-bottom: 1px solid #fb4934;
+	border-bottom: 2px solid #fb4934;
 }
 
 #backlight,
@@ -67,43 +65,45 @@ window#waybar {
 #custom-power,
 #custom-speaker,
 #custom-updater,
-#custom-weather,
-#custom-weather.clearNight,
-#custom-weather.cloudyFoggyDay,
-#custom-weather.cloudyFoggyNight,
-#custom-weather.default,
-#custom-weather.rainyDay,
-#custom-weather.rainyNight,
-#custom-weather.severe,
-#custom-weather.showyIcyDay,
-#custom-weather.snowyIcyNight,
-#custom-weather.sunnyDay {
-	color: #aa9785;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	padding-right: 6px;
-	padding-left: 6px;
+#custom-weather {
+	padding: 3px 6px 3px 6px;
+	opacity: 0.8;
 }
 
 #battery.warning,
 #disk.warning,
 #memory.warning,
 #cpu.warning {
-	border-top: 3px solid #1d2021;
-	border-bottom: 3px solid #fabd2f;
+	border-bottom: 2px solid #fabd2f;
 }
 
 #battery.critical,
 #disk.critical,
 #memory.critical,
 #cpu.critical {
-	border-top: 3px solid #1d2021;
-	border-bottom: 3px solid #fb4934;
+	border-bottom: 2px solid #fb4934;
+}
+
+#battery {
+	color: #a6e3a1;
 }
 
 #battery.charging {
-	border-top: 3px solid #1d2021;
+	color: whitesmoke;
 	border-bottom: 1px solid #1aac57;
+}
+
+#network {
+	color: #f9e2af;
+	padding-right: 10px;
+}
+
+#network.disconnected {
+	color: #ed5e5d;
+}
+
+#clock {
+	color: #fab387;
 }
 
 #pulseaudio-slider slider {
@@ -130,6 +130,11 @@ window#waybar {
 
 #pulseaudio.microphone {
 	font-size: 15px;
+	color: #cba6f7;
+}
+
+#backlight {
+	color: #cccccc;
 }
 
 #backlight-slider slider {
@@ -155,13 +160,26 @@ window#waybar {
 }
 
 #idle_inhibitor {
-    font-size: 14px;
-    font-weight: bold;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fab387;
 }
 
 #idle_inhibitor.activated {
-    font-size: 14px;
-    color:#e2974c;
+	font-size: 13px;
+	color: #e67935;
 	min-height: 0px;
 	min-width: 0px;
+}
+
+#custom-github {
+	color: #ed5e5d;
+}
+
+#custom-updater {
+	color: #c8c1b9;
+}
+
+#custom-menu {
+	font-size: 1.5rem;
 }
