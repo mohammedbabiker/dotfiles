@@ -4,10 +4,10 @@
 
 ### PLEASE NOTE: This branch is the rolling release of the mohmd-Hyprland-Dotfile and includes the latest changes.
 
-## Screenshot :
+## Screenshot
 ![image](./assets/screenshot.png)
 
-## Details :
+## Details
 - **OS**: Arch Linux
 - **Compositor**: [Hyprland](https://github.com/hyprwm/Hyprland)
 - **Notifications**: [dunst](https://github.com/dunst-project/dunst)
@@ -28,7 +28,7 @@ mohmd-Hypland-Dotfile are tested with the following Arch based distributions:
 
 But the installation should work on all Arch Linux based distributions as well.
 
-## Dependencies & apps :
+## Dependencies & apps
 
 ```sh
 yay --needed -S pacman-contrib hyprland-git bluez bluez-utils unzip rofi dunst \ 
@@ -61,4 +61,11 @@ All keybinds can be found in the `hypr/keybindings.conf` config file
 
 ## Credits
 
-Inspired by [Stephan Raabe](https://gitlab.com/stephan-raabe/dotfiles), [Roshan Paudel](https://github.com/hyper-dot/Arch-Hyprland), [SolDoesTech](https://github.com/SolDoesTech/hyprland)
+Inspired by 
+- [Stephan Raabe](https://gitlab.com/stephan-raabe/dotfiles)
+- [Roshan Paudel](https://github.com/hyper-dot/Arch-Hyprland)
+- [SolDoesTech](https://github.com/SolDoesTech/hyprland)
+- [Chris Power](https://github.com/cpow/neovim-for-newbs) `nvim`
+
+and many more...
+
