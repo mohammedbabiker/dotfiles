@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="mate ~/.zshrc"
 alias v="nvim"
 alias p="pacman"
+alias n="neofetch"
 # alias cluc="sudo pacman -Qtdq && sudo pacman -R $(sudo pacman -Qtdq)"
 alias glz="lazygit"
 alias gf="git diff"
@@ -111,6 +112,7 @@ alias  l='eza -lh  --icons=auto'
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cache="du -sh /home/ali/.cache && du -sh /var/cache/pacman/pkg"
 
 # bun completions
 [ -s "/home/ali/.bun/_bun" ] && source "/home/ali/.bun/_bun"
