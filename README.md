@@ -2,6 +2,8 @@
 
 > Open For Any Suggestions
 
+### PLEASE NOTE: This branch is the rolling release of the mohmd-Hyprland-Dotfile and includes the latest changes.
+
 ## Screenshot :
 ![image](./assets/screenshot.png)
 
@@ -14,7 +16,17 @@
 - **Search menu**: [rofi](https://github.com/davatorium/rofi)
 - **Fetch script**: `neofetch`
 - **Browser**: Firefox
+- **Editor**: nvim
+- **Icons**: Font Awesome
 - **Font**: [Nerd Font](https://www.nerdfonts.com/)
+
+## Supported platforms
+
+mohmd-Hypland-Dotfile are tested with the following Arch based distributions:
+
+- Arch Linux (recommended)
+
+But the installation should work on all Arch Linux based distributions as well.
 
 ## Dependencies & apps :
 
