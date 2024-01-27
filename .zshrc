@@ -100,10 +100,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="mate ~/.zshrc"
 alias v="nvim"
-alias p="sudo pacman"
+alias p="pacman"
 # alias cluc="sudo pacman -Qtdq && sudo pacman -R $(sudo pacman -Qtdq)"
 alias glz="lazygit"
 alias gf="git diff"
+alias gm="git checkout main"
+alias gd="git checkout dev"
 alias  l='eza -lh  --icons=auto'
 # alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
