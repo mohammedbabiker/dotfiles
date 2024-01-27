@@ -13,8 +13,8 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias rld='~/mohmd-Hyprland-Dotfile/waybar/reload.sh'
 alias wifi='nmtui'
-alias neof='neofetch'
-alias vi='nvim'
+alias neo='neofetch'
+alias v='nvim'
 
 # Git aliases
 alias ga="git add"
@@ -24,6 +24,7 @@ alias gc="git commit"
 alias gst="git status"
 alias glo="git log --oneline"
 alias glg="git log --graph"
+alias glz="lazygit"
 
 source /usr/share/doc/pkgfile/command-not-found.bash
 
