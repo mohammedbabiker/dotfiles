@@ -498,34 +498,8 @@
             "wofi",
             "rofi"
         ]
-    },
-    "custom/cycle_wall": {
-        "format": " ",
-        "on-click": "~/.config/hypr/scripts/WallpaperSelect.sh",
-        "on-click-right": "~/.config/hypr/scripts/Wallpaper.sh",
-        "on-click-middle": "~/.config/hypr/scripts/WaybarStyles.sh",
-        "tooltip": true,
-        "tooltip-format": "Change wallpaper or style"
-    },
-    "custom/keybinds": {
-        "format": "󰺁 HINT!",
-        "tooltip": false,
-        "on-click": "~/.config/hypr/scripts/KeyHints.sh"
-    },
-    "custom/keyboard": {
-        "exec": "cat ~/.cache/kb_layout",
-        "interval": 1,
-        "format": " {}",
-        "on-click": "~/.config/hypr/scripts/SwitchKeyboardLayout.sh",
-        "tooltip": false
-    },
-    "custom/light_dark": {
-        "format": "",
-        "on-click": "~/.config/hypr/scripts/DarkLight.sh",
-        "on-click-right": "~/.config/hypr/scripts/WaybarStyles.sh",
-        "on-click-middle": "~/.config/hypr/scripts/Wallpaper.sh",
-        "tooltip": false
-    },
+    }, 
+   
     "custom/lock": {
         "format": "",
         "on-click": "~/.config/hypr/scripts/LockScreen.sh",
@@ -535,8 +509,7 @@
         "format": "",
         "tooltip": false,
         "on-click": "pkill rofi || rofi -show drun -modi run,drun,filebrowser",
-        "on-click-middle": "~/.config/hypr/scripts/WallpaperSelect.sh",
-        "on-click-right": "~/.config/hypr/scripts/WaybarLayout.sh"
+        "on-click-middle": ""
     },
     "custom/github": {
         "format": "",
@@ -560,7 +533,7 @@
         "format": "⏻ ",
         "tooltip": false,
         "on-click": "~/.config/hypr/scripts/Wlogout.sh",
-        "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh"
+        "on-click-right": ""
     },
     "custom/updater": {
         "format": " {}",
@@ -723,7 +696,7 @@
     "custom/power_vertical": {
         "format": "⏻",
         "tooltip": false,
-        // "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh",
-        "on-click": "~/.config/hypr/scripts/RofiPower.sh"
+        "on-click-right": "~/.config/hypr/scripts/#",
+        "on-click": "~/.config/hypr/scripts/#"
     }
 }
