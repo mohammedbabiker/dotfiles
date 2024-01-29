@@ -112,10 +112,10 @@ alias  l='eza -lh  --icons=auto'
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cache="du -sh /home/ali/.cache && du -sh /var/cache/pacman/pkg"
+alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 
 # bun completions
-[ -s "/home/ali/.bun/_bun" ] && source "/home/ali/.bun/_bun"
+[ -s "/home/li/.bun/_bun" ] && source "/home/li/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
