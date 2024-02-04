@@ -1,7 +1,7 @@
 return {
   {
     "L3MON4D3/LuaSnip",
-    lazy = false,
+    lazy = true, -- we let nvim-cmp load this too
     dependencies = {
       "rafamadriz/friendly-snippets",
       "saadparwaiz1/cmp_luasnip",
@@ -12,12 +12,13 @@ return {
   },
   {
     "hrsh7th/cmp-nvim-lsp",
-    lazy = false,
+    lazy = true, -- we let nvim-cmp load this for us
     config = true,
   },
   {
     "hrsh7th/nvim-cmp",
-    lazy = false,
+    event = "InsertEnter", -- load cmp after entering insert mode
+    -- lazy = false,
     config = function()
       local cmp = require("cmp")
       cmp.setup({
