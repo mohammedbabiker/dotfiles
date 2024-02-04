@@ -32,8 +32,8 @@ But the installation should wor'gitsigns').setup()k on all Arch Linux based dist
 
 ```sh
 yay --needed -S pacman-contrib hyprland-git bluez bluez-utils rofi dunst \ 
-xfce4-power-manager thunar noto-fonts ttf-font-awesome otf-font-awesome \ 
-ttf-fira-sans ttf-fira-code ttf-firacode-nerd figlet vlc eza python-pip \
+xfce4-power-manager thunar ttf-ms-fonts noto-fonts \ 
+figlet vlc eza python-pip ttf-font-awesome \
 python-psutil python-rich python-click pavucontrol xautolock blueman \
 brightnessctl gum xdg-desktop-portal nm-connection-editor gvfs lazygit \
 networkmanager network-manager-applet pamixer grim unzip \
