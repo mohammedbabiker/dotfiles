@@ -111,14 +111,27 @@ alias glg="git log --graph"
 alias glz="lazygit"
 
 
+# networking
+alias myip="curl http://ipecho.net/plain; echo"
+
+# count files in dir
+alias lsc='ls -l | wc -l'
+
+# history
+alias hz="cat .zsh_history"
+alias hb="cat .bash_history"
+
+alias ..='cd ..'
 alias  l='eza -lh  --icons=auto'
 alias ls="ls --color=auto"
+
 # alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
+alias rns="systemctl --type=service --state=running"
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
