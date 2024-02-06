@@ -6,8 +6,8 @@ return {
   {
     'nvim-telescope/telescope.nvim',
     keys = { -- only load the plugin when these keys are pressed:
-        { "<C-p>", "<CMD>Telescope find_files<CR>" },
-        { "<leader>lg", "<CMD>Telescope live_grep<CR>" },
+      { "<C-p>",      "<CMD>Telescope find_files<CR>" },
+      { "<leader>lg", "<CMD>Telescope live_grep<CR>" },
     },
     tag = '0.1.5',
     dependencies = { 'nvim-lua/plenary.nvim' },
@@ -19,7 +19,7 @@ return {
           },
         },
       })
-    require("telescope").load_extension("ui-select")
+      require("telescope").load_extension("ui-select")
     end,
   },
 }

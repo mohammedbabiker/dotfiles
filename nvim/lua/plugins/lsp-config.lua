@@ -24,13 +24,13 @@ return {
       lspconfig.tsserver.setup({             -- javascript
         capabilites = capabilities,
       })
-      lspconfig.html.setup({                 -- html
+      lspconfig.html.setup({ -- html
         capabilites = capabilities,
       })
-      lspconfig.lua_ls.setup({               -- lua
+      lspconfig.lua_ls.setup({ -- lua
         capabilites = capabilities,
       })
-      lspconfig.cssls.setup({                -- css
+      lspconfig.cssls.setup({ -- css
         capabilites = capabilities,
       })
       lspconfig.tailwindcss.setup({
