@@ -7,7 +7,7 @@ return {
     'nvim-telescope/telescope.nvim',
     keys = { -- only load the plugin when these keys are pressed:
         { "<C-p>", "<CMD>Telescope find_files<CR>" },
-        { "<leader>fg", "<CMD>Telescope live_grep<CR>" },
+        { "<leader>lg", "<CMD>Telescope live_grep<CR>" },
     },
     tag = '0.1.5',
     dependencies = { 'nvim-lua/plenary.nvim' },
