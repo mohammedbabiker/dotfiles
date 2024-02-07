@@ -3,7 +3,15 @@ return {
     "williamboman/mason.nvim",
     cmd = "Mason", -- load mason when running :Mason command
     config = function()
-      require("mason").setup()
+      require("mason").setup({
+        ui = {
+          icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗",
+          },
+        },
+      })
     end,
   },
   {
