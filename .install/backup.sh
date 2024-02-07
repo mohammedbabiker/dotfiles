@@ -1,36 +1,32 @@
 # Backup existing dotfiles
 
-datets=$(date '+%Y%m%d%H%M%S')
-if [ -d ~/mohmd-Hyprland-Dotfile ] || [ -f ~/.bashrc ]; then
-echo "backup"
+datets=$(date '+%Y-%m\%d-%H:%M:%S')
+if [ -d ~/mohmd-Hyprland-Dotfile ] || [ -f ~/.zshrc ]; then
+  figlet "backup"
   if [ -d ~/mohmd-Hyprland-Dotfile ]; then
         echo "The script has detected an existing dotfiles folder and will try to create a backup into the folder:"
-        echo "~/mohmd-Hyprland-Dotfile-backup/backups/$datets"
+        echo "~/mohmd-Hyprland-Dotfile-backup/$datets"
     fi
-    if [ ! -L ~/.bashrc ] && [ -f ~/.bashrc ]; then
-        echo "The script has detected an existing .bashrc file and will try to create a backup to:" 
-        echo "~/mohmd-Hyprland-Dotfile-backup/backups/$datets/.bashrc-old"
+    if [ ! -L ~/.zshrc ] && [ -f ~/.zshrc ]; then
+        echo "The script has detected an existing .zshrc file and will try to create a backup to:" 
+        echo "~/mohmd-Hyprland-Dotfile-backup/$datets/.zshrc-old"
     fi
     if gum confirm "Do you want to create a backup?" ;then
         if [ ! -d ~/mohmd-Hyprland-Dotfile-backup ]; then
             mkdir ~/mohmd-Hyprland-Dotfile-backup
             echo "~/mohmd-Hyprland-Dotfile-backup created."
         fi
-        if [ ! -d ~/mohmd-Hyprland-Dotfile-backup/backups ]; then
-            mkdir ~/mohmd-Hyprland-Dotfile-backup/backups
-            echo "~/mohmd-Hyprland-Dotfile-backup/backups created"
+        if [ ! -d ~/mohmd-Hyprland-Dotfile-backup/$datets ]; then
+            mkdir ~/mohmd-Hyprland-Dotfile-backup/$datets
+            echo "~/mohmd-Hyprland-Dotfile-backup/$datets created"
         fi
-        if [ ! -d ~/mohmd-Hyprland-Dotfile-backup/backups/$datets ]; then
-            mkdir ~/mohmd-Hyprland-Dotfile-backup/backups/$datets
-            echo "~/mohmd-Hyprland-Dotfile-backup/backups/$datets created"
+        if [ -d ~/mohmd-Hyprland-Dotfile ]; then
+            rsync -a ~/mohmd-Hyprland-Dotfile/ ~/mohmd-Hyprland-Dotfile-backup/$datets/
+            echo "Backup of your current files in ~/mohmd-Hyprland-Dotfile-backup/$datets created."
         fi
-        if [ -d ~/dotfiles ]; then
-            rsync -a ~/mohmd-Hyprland-Dotfile/ ~/mohmd-Hyprland-Dotfile-backup/backups/$datets/
-            echo "Backup of your current files in ~/mohmd-Hyprland-Dotfile-backup/backups/$datets created."
-        fi
-        if [ -f ~/.bashrc ]; then
-            cp ~/.bashrc ~/mohmd-Hyprland-Dotfile-backup/backups/$datets/.bashrc-old
-            echo "Existing .bashrc file found in homefolder. .bashrc-old created"
+        if [ -f ~/.zshrc ]; then
+            cp ~/.zshrc ~/mohmd-Hyprland-Dotfile-backup/$datets/.zshrc-old
+            echo "Existing .zshrc file found in homefolder. .zshrc-old created"
         fi
     elif [ $? -eq 130 ]; then
         exit 130
