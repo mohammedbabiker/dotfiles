@@ -110,7 +110,7 @@ alias glo="git log --oneline"
 alias glg="git log --graph"
 alias glz="lazygit"
 
-
+alias t="timedatectl"
 # networking
 alias myip="curl http://ipecho.net/plain; echo"
 
