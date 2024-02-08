@@ -5,4 +5,6 @@ vim.cmd("set shiftwidth=2")
 vim.g.mapleader = " "
 vim.cmd("set cursorline")
 vim.cmd("set number")
---vim.cmd("set relativenumber")
+vim.cmd("set relativenumber")
+vim.cmd("set nobackup")
+vim.cmd("set ignorecase") -- ignore capital late on search
