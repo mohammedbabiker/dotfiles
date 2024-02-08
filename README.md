@@ -10,13 +10,13 @@
 ## Details
 - **OS**: Arch Linux
 - **Compositor**: [Hyprland](https://github.com/hyprwm/Hyprland)
-- **Notifications**: [dunst](https://github.com/dunst-project/dunst)
-- **Wallpaper Loader**: [hyprpaper](https://github.com/hyprwm/hyprpaper)
-- **Terminal**: [kitty](https://github.com/kovidgoyal/kitty)
-- **Search menu**: [rofi](https://github.com/davatorium/rofi)
-- **Fetch script**: `neofetch`
+- **Notifications**: [Dunst](https://github.com/dunst-project/dunst)
+- **Wallpaper Loader**: [Hyprpaper](https://github.com/hyprwm/hyprpaper)
+- **Terminal**: [Kitty](https://github.com/kovidgoyal/kitty)
+- **Search menu**: [Rofi](https://github.com/davatorium/rofi)
+- **Fetch script**: `Neofetch`
 - **Browser**: Firefox
-- **Editor**: nvim
+- **Editor**: NVIM
 - **Icons**: Font Awesome
 - **Font**: [Nerd Font](https://www.nerdfonts.com/)
 
@@ -39,7 +39,7 @@ brightnessctl gum xdg-desktop-portal nm-connection-editor gvfs lazygit \
 networkmanager network-manager-applet pamixer grim unzip \
 rofi-emoji hyprpaper-git swaylock-effects dracula-icons-git\
 ffmpegthumbnailer swayidle wlogout trizen bibata-cursor-theme waybar \
-nmg-look xpad jq net-tools wlsunset  
+nmg-look xpad jq net-tools wlsunset delve swappy rsync
 ```
 ## Installations
 ```sh
