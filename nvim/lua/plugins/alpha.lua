@@ -49,13 +49,29 @@ return {
       dashboard.button("q", "   Quit NVIM", ":qa<CR>"),
     }
 
-    local function footer()
-      return "Mohammed Babiker Babai"
-    end
+    --local function footer()
+      --return "Mohammed Babiker Babai"
+    --end
 
-    dashboard.section.footer.val = footer()
+    --dashboard.section.footer.val = footer()
 
     dashboard.opts.opts.noautocmd = true
     alpha.setup(dashboard.opts)
+
+    require('alpha').setup(dashboard.opts)
+
+    vim.api.nvim_create_autocmd('User', {
+      pattern = 'LazyVimStarted',
+      callback = function()
+        local stats = require('lazy').stats()
+        local count = (math.floor(stats.startuptime * 100) / 100)
+        dashboard.section.footer.val = {
+          "󱐌 " .. stats.count .. " plugins loaded in " .. count .. " ms",
+          " ",
+          "      Mohammed Babiker Babai"
+        }
+        pcall(vim.cmd.AlphaRedraw)
+      end,
+    })
   end,
 }
