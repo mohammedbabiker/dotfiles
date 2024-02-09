@@ -1,25 +1,25 @@
-# Copy mohmd-Hyprland-Dotfile
+# Copy dotfiles
 
-if [ ! -d ~/mohmd-Hyprland-Dotfile ]; then
+if [ ! -d ~/dotfiles ]; then
 echo ""
 fi
 
-if [ ! -d ~/mohmd-Hyprland-Dotfile ]; then
+if [ ! -d ~/dotfiles ]; then
 echo "The script will now remove existing directories and files from ~/.config/"
 echo ""
-echo "Symbolic links will then be created from ~/mohmd-Hyprland-Dotfile into your ~/.config/ directory."
+echo "Symbolic links will then be created from ~/dotfiles into your ~/.config/ directory."
 echo ""
 fi
-if [[ ! $(tty) == *"pts"* ]] && [ -d ~/mohmd-Hyprland-Dotfile ]; then
+if [[ ! $(tty) == *"pts"* ]] && [ -d ~/dotfiles ]; then
     echo "You're running the script in tty. You can delete the existing ~/dotfiles folder now for a clean installation."
     echo "If not, the script will overwrite existing files but will not remove additional files or folders of your custom configuration."
     echo ""
 else
-    if [ -d ~/mohmd-Hyprland-Dotfile ]; then
+    if [ -d ~/dotfiles ]; then
         echo "The script will overwrite existing files but will not remove additional files or folders of your custom configuration."
     fi
 fi
-if [ ! -d ~/mohmd-Hyprland-Dotfile ]; then
+if [ ! -d ~/dotfiles ]; then
     echo "PLEASE BACKUP YOUR EXISTING CONFIGURATIONS in .config IF NEEDED!"
     echo ""
 fi
@@ -27,18 +27,18 @@ fi
 if gum confirm "Do you want to install the prepared files now?" ;then
     if [ ! $mode == "dev" ]; then
         echo "Copy started"
-        if [ ! -d ~/mohmd-Hyprland-Dotfile ]; then
-            mkdir ~/mohmd-Hyprland-Dotfile
-            echo "~/mohmd-Hyprland-dotfile folder created."
+        if [ ! -d ~/dotfiles ]; then
+            mkdir ~/dotfiles
+            echo "~/dotfiles folder created."
         fi   
-        rsync -avhp -I ~/mohmd-Hyprland-Dotfile/ ~/mohmd-Hyprland-Dotfile/
-        if [[ $(_isFolderEmpty ~/mohmd-Hyprland-Dotfile/) == 0 ]] ;then
-            echo "AN ERROR HAS OCCURED. Copy prepared dofiles from ~/mohmd-Hyprland-Dotfile/ to ~/mohmd-Hyprland-Dotfile/ failed" 
+        rsync -avhp -I ~/dotfiles/ ~/dotfiles/
+        if [[ $(_isFolderEmpty ~/dotfiles/) == 0 ]] ;then
+            echo "AN ERROR HAS OCCURED. Copy prepared dofiles from ~/dotfiles/ to ~/dotfiles/ failed" 
             echo "Please check that rsync is installad on your system."
-            echo "Execution of rsync -a -I ~/mohmd-Hyprland-Dotfile/ ~/mohmd-Hyprland-Dotfile/ is required."
+            echo "Execution of rsync -a -I ~/dotfiles/ ~/dotfiles/ is required."
             exit
         fi
-        echo "All files from ~/mohmd-Hyprland-Dotfile/ to ~/mohmd-Hyprland-Dofile/ copied."
+        echo "All files from ~/dotfiles/ to ~/dotfiles/ copied."
     else
         echo "Skipped: DEV MODE!"
     fi

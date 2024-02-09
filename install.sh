@@ -1,5 +1,5 @@
 #!/bin/bash
-# ln -s ~/mohmd-Hyprland-Dotfile/* ~/.config
+# ln -s ~/dotfiles/* ~/.config
 source .install/library.sh
 clear
 
@@ -8,13 +8,13 @@ mode="live"
 if [ ! -z $1 ]; then
   mode="dev"
   echo "IMPORTANT: DEV MODE ACTIVATED."
-  echo "Existing mohmd-Hyprland-Dotfile folder will not be modified."
+  echo "Existing dotfiles folder will not be modified."
   echo "Symbolic link will not be created."
 fi
 
 echo "by Mohammed babiker"
 echo ""
-if [ -d ~/mohmd-Hyprland-Dotfile ] ;then
+if [ -d ~/dotfiles ] ;then
   echo "Dotfile installation has been detected."
 else
   echo "This script will giude you through installation process."
@@ -43,7 +43,7 @@ source .isntall/copy.sh
 source .install/config-folder.sh
 
 if [[ $profile == *"Hyprland"* ]]; then
-  source .install/hyprland-mohmd-Hyprland-Dotfile.sh
+  source .install/hyprland-dotfiles.sh
 fi
 
 source .install/cleanup.sh

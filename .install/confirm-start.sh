@@ -5,7 +5,7 @@ echo "You can cancel the installation with CTRL + C"
 echo "If you have already installed a window manager like sway, please backup your .config folder."
 SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
-if [ $SCRIPTPATH = "/home/$USER/mohmd-Hyprland-Dotfile" ]; then
+if [ $SCRIPTPATH = "/home/$USER/dotfiles" ]; then
     echo ""
     echo "IMPORTANT: You're running the installation script from the installation target directory."
     echo "Please move the installation folder dotfiles e.g. to ~/Downloads/ and start the script again."
@@ -14,7 +14,7 @@ if [ $SCRIPTPATH = "/home/$USER/mohmd-Hyprland-Dotfile" ]; then
         exit
     fi
 fi
-if [ ! -d ~/mohmd-Hyprland-Dotfile ];then
+if [ ! -d ~/dotfiles ];then
     if gum confirm "DO YOU WANT TO START THE INSTALLATION NOW?" ;then
         echo "Installation started."
     elif [ $? -eq 130 ]; then

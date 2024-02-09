@@ -1,8 +1,8 @@
-# mohmd-Hyprland-Dotfile
+# dotfiles
 
 > Open For Any Suggestions
 
-### PLEASE NOTE: This branch is the rolling release of the mohmd-Hyprland-Dotfile and includes the latest changes.
+### PLEASE NOTE: This branch is the rolling release of the dotfiles and includes the latest changes.
 
 ## Screenshot
 ![image](./assets/screenshot.png)
@@ -22,7 +22,7 @@
 
 ## Supported platforms
 
-mohmd-Hypland-Dotfile are tested with the following Arch based distributions:
+This dotfiles are tested with the following Arch based distributions:
 
 - Arch Linux (recommended)
 
@@ -43,8 +43,8 @@ nmg-look xpad jq net-tools wlsunset delve swappy rsync
 ```
 ## Installations
 ```sh
-git clone https://github.com/mohammedbabiker/mohmd-Hyprland-Dotfile.git
-cd mohmd-Hyprland-Dotfile
+git clone https://github.com/mohammedbabiker/dotfiles.git
+cd dotfiles
 cp -r ./* ~/.config/
 ```
 ## Keybinds

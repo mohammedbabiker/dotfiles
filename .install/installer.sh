@@ -1,6 +1,6 @@
 # Install required packages
 
-if [ -d ~/mohmd-Hyprland-Dotfile ] ;then
+if [ -d ~/dotfiles ] ;then
     echo "Do you want to check for new packages only (faster installation)"
     echo "or do you want to reinstall all packages again? (more robust and can help to fix issues)"
     if gum confirm "How do you want to proceed?" --affirmative "New packages only" --negative "Force reinstallation" ;then
