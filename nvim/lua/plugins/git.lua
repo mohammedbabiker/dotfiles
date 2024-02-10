@@ -1,6 +1,7 @@
 return {
   {
-    "tpope/vim-fugitive"
+    "tpope/vim-fugitive",
+    event = { "BufReadPre", "BufNewFile" }, -- load the plugin when entering a buffer
   },
   {
     "lewis6991/gitsigns.nvim",

@@ -3,6 +3,7 @@
 -- yay -S hurl-bin
 return {
   "ray-x/web-tools.nvim",
+  cmd = { "BrowserOpen", "BrowserPreview", "BrowserRestart", "BrowserSync", "BrowserStop"},
   config = function()
     require('web-tools').setup({
       keymaps = {

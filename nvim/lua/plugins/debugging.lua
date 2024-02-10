@@ -1,5 +1,9 @@
 return {
   "mfussenegger/nvim-dap",
+  keys = { -- load only when click on keys
+    { "<leader>dt", "<CMD>DapToggleBreakpoint<CR>" },
+    { "<leader>dc", "<CMD>DapContinue<CR>" }
+  },
   dependencies = {
     "rcarriga/nvim-dap-ui",
     "leoluz/nvim-dap-go",
@@ -24,7 +28,7 @@ return {
       dapui.close()
     end
 
-    vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, {})
-    vim.keymap.set("n", "<Leader>dc", dap.continue, {})
+    --vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, {})
+    --vim.keymap.set("n", "<Leader>dc", dap.continue, {})
   end,
 }
