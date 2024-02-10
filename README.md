@@ -39,7 +39,7 @@ brightnessctl gum xdg-desktop-portal nm-connection-editor gvfs lazygit \
 networkmanager network-manager-applet pamixer grim unzip \
 rofi-emoji hyprpaper-git swaylock-effects dracula-icons-git\
 ffmpegthumbnailer swayidle wlogout trizen bibata-cursor-theme waybar \
-nmg-look xpad jq net-tools wlsunset delve swappy rsync
+nmg-look xpad jq net-tools wlsunset delve swappy rsync fzf
 ```
 ## Installations
 ```sh
