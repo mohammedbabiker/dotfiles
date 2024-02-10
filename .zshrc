@@ -110,6 +110,7 @@ alias glo="git log --oneline"
 alias glg="git log --graph"
 alias glz="lazygit"
 
+alias note="$EDITOR ~/xpad.txt"
 alias t="timedatectl"
 # networking
 alias myip="curl http://ipecho.net/plain; echo"
@@ -134,9 +135,13 @@ alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 alias rns="systemctl --type=service --state=running"
 
 source /usr/share/doc/pkgfile/command-not-found.zsh
-
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 # bun completions
 [ -s "/home/li/.bun/_bun" ] && source "/home/li/.bun/_bun"
+
+
+eval $(thefuck --alias)
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
