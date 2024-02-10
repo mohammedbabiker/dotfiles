@@ -6,5 +6,7 @@ vim.g.mapleader = " "
 vim.cmd("set cursorline")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
-vim.cmd("set nobackup")
+vim.cmd("set backupdir=~/.cache/vim")
+vim.cmd("set noswapfile")
+vim.cmd("set showmatch")
 vim.cmd("set ignorecase") -- ignore capital late on search
