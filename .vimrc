@@ -22,7 +22,7 @@ set scrolloff=10
 
 set mouse=a
 
-" set nowrap
+set nowrap
 
 set incsearch
 
