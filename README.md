@@ -5,7 +5,7 @@
 ### PLEASE NOTE: This branch is the rolling release of the dotfiles and includes the latest changes.
 
 ## Screenshot
-![image](./assets/screenshot.png)
+![image](./assets/screenshot1.png)
 
 ## Details
 - **OS**: Arch Linux
