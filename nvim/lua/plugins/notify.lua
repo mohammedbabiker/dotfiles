@@ -1,7 +1,8 @@
 return {
 	{
 		"rcarriga/nvim-notify",
-		event = "VeryLazy",
+		-- event = "VeryLazy",
+    event = { "BufReadPre", "BufNewFile" },   -- load the plugin when entering a buffers
 		config = function()
 			local notify = require("notify")
 
