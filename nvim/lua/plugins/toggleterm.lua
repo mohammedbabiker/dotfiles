@@ -2,7 +2,10 @@ return {
   "akinsho/toggleterm.nvim",
   version = "*",
   keys = {
-    { "<leader>tl", "<cmd>ToggleTerm<cr>" },
+    { "<leader>tth", ":ToggleTerm dir=~ direction=horizontal<CR>" },
+    { "<leader>ttv", ":ToggleTerm size=60 dir=~ direction=vertical<CR>" },
+    { "<leader>ttf", ":ToggleTerm dir=~ direction=float<CR>" },
+    { "<leader>ttt", ":ToggleTerm dir=~ direction=tab<CR>" },
   },
   opts = {
     size = 13,
@@ -13,6 +16,6 @@ return {
     start_in_insert = true,
     persist_size = true,
     -- direction = "float",
-    direction = "horizontal",
+    -- direction = "horizontal",
   },
 }
