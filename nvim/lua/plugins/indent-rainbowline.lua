@@ -1,8 +1,10 @@
 return {
   {
     "lukas-reineke/indent-blankline.nvim",
-    event = "VeryLazy",
+    event = "BufReadPost",
     main = "ibl",
-    opts = {}
+    opts = {
+      enabled = true,
+    },
   },
 }
