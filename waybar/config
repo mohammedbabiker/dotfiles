@@ -9,7 +9,7 @@
 	"modules-left": [
 		"custom/menu",
     "custom/github",
-		"mpris",
+		// "mpris",
 		"hyprland/window"
 	],
 	"modules-center": [
