@@ -18,10 +18,11 @@ else
 fi
 
 # Aliases
-alias l='eza -lh  --icons=auto'
-alias ls="exa" # "eza -1 --icons=auto" # "ls --color=auto"
-alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
-alias ld='eza -lhD --icons=auto' # long list dirs
+alias l='exa -lh  --icons=auto'
+alias ls="exa" # "exa -1 --icons=auto" # "ls --color=auto"
+alias ll='exa -lha --icons=auto --sort=name --group-directories-first' # long list all
+alias ld='exa -lhD --icons=auto' # long list dirs
+alias cl='clear'
 alias ..='cd ..'
 alias cd..='cd ..'
 alias v="nvim"
