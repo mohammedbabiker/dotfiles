@@ -74,6 +74,8 @@ window#waybar {
 #disk.warning,
 #memory.warning,
 #cpu.warning {
+  color: #ed5e5d;
+  background: none;
 	border-bottom: 2px solid #fabd2f;
 }
 
@@ -81,6 +83,7 @@ window#waybar {
 #disk.critical,
 #memory.critical,
 #cpu.critical {
+	color: #ed5e5d;
 	border-bottom: 2px solid #fb4934;
 }
 
