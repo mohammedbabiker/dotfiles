@@ -75,7 +75,3 @@
     frame_color = "#F38BA8"
     timeout = 1000
     format = "<b>%s</b>\n%b"
-
-# vim: ft=cfg
-
-
