@@ -15,13 +15,15 @@ brightnessctl nm-connection-editor waybar \
 networkmanager network-manager-applet pamixer grim unzip \
 hyprpaper swaylock-effects dracula-icons-git\
 ffmpegthumbnailer swayidle wlogout trizen bibata-cursor-theme \
-nmg-look xpad jq net-tools wlsunset delve swappy rsync fzf bat
+nmg-look xpad jq net-tools wlsunset delve swappy rsync stow bat
 ```
 ## Installations
 ```sh
+# Install with stow
+
 git clone https://github.com/mohammedbabiker/dotfiles.git
 cd dotfiles
-cp -r ./* ~/.config/
+stow .
 ```
 <!-- ## Keybinds -->
 <!-- All keybinds can be found in the `hypr/keybindings.conf` config file -->
