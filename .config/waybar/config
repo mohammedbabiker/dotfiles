@@ -1,0 +1,39 @@
+{
+	"include": "~/.config/waybar/modules.jsonc",
+	"layer": "top",
+	"position": "top",
+	"height": 14,
+	"margin-left": 10,
+	"margin-right": 10,
+	"margin-top": 2,
+	"modules-left": [
+		"custom/menu",
+    "custom/github",
+		// "mpris",
+		"hyprland/window"
+	],
+	"modules-center": [
+		"hyprland/workspaces",
+		"custom/updater"
+	],
+	"modules-right": [
+		"tray",
+		"actions",
+		// "pulseaudio",
+		"pulseaudio#microphone",
+		"clock",
+		"group/laptop",
+		"network",
+		"idle_inhibitor",
+		"custom/power"
+	],
+	"custom/power": {
+		"format": " ",
+		"icon-size": 20,
+		"tooltip": false
+	},
+	"clock": {
+		"format": "{:%H:%M}",
+		"tooltip": false
+	}
+}
