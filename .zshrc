@@ -35,6 +35,10 @@ alias note="$EDITOR ~/xpad.txt"
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 alias zconf="nvim ~/.zshrc"
 
+# rm trash
+alias rm="rmtrash"
+alias rmdir="rmdirtrash"
+
 # GIT
 alias ga="git add"
 alias gl="git pull"
