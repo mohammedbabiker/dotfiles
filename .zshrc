@@ -49,7 +49,7 @@ alias gm="git checkout main"
 alias gd="git checkout dev"
 alias gst="git status"
 alias glo="git log --oneline"
-alias glg="git log --graph"
+alias gla="git log --all --graph"
 alias glz="lazygit"
 
 # history
