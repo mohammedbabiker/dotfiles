@@ -25,17 +25,7 @@ git clone https://github.com/mohammedbabiker/dotfiles.git
 cd dotfiles
 stow .
 ```
-<!-- ## Keybinds -->
-<!-- All keybinds can be found in the `hypr/keybindings.conf` config file -->
-<!-- - `SUPER+SPACE`: Application Launcher (rofi) -->
-<!-- - `SUPER+CTRL+M`: Quit Hyprland -->
-<!-- - `SUPER+1,..9`: Switch workspace -->
-<!-- - `SUPER+SHIFT+1,..9`: Move window to workspace -->
-<!-- - `SUPER+Q`: Kitty -->
-<!-- - `SUPER+ALT+X`: Firefox -->
-<!-- - `SUPER+E`: Filemanager (thunar) -->
-<!-- - `SUPER+PRINT`: Take a Screenshot -->
-<!---->
+
 ## Credits
 
 Inspired by 
