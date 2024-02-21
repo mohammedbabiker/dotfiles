@@ -52,6 +52,9 @@ alias glo="git log --oneline"
 alias gla="git log --all --graph"
 alias glz="lazygit"
 
+# tmux
+alias tx="tmux new -s"
+
 # history
 alias hz="bat .zsh_history"
 alias hb="bat .bash_history"
