@@ -1,6 +1,7 @@
 return {
   "christoomey/vim-tmux-navigator",
-  lazy = false,
+  -- lazy = false,
+  event = { "BufReadPre", "BufNewFile" },
   keys = {
     { "<c-h>", "<cmd> TmuxNavigateLeft<cr>" },
     { "<c-l>", "<cmd> TmuxNavigateRight<cr>" },
