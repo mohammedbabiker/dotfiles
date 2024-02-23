@@ -41,6 +41,20 @@ return {
       })
       lspconfig.lua_ls.setup({ -- lua
         capabilites = capabilities,
+        setting = {
+          lua = {
+            diagnostics = {
+              globals = { "vim" },
+            },
+            workspace = {
+              library = {
+                -- runtime file path
+                [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                [vim.fn.stdpath("config") .. "/lua"] = true,
+              },
+            },
+          },
+        }
       })
       lspconfig.cssls.setup({ -- css
         capabilites = capabilities,
