@@ -18,7 +18,8 @@ return {
   -- Enable communications between LSP config and Mason
   {
     "williamboman/mason-lspconfig.nvim",
-    event = "VeryLazy", -- load this after critical plugins
+    -- event = "VeryLazy", -- load this after critical plugins
+    lazy = false,
     opts = {
       auto_install = true,
     },
