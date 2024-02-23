@@ -9,6 +9,7 @@ return {
       { "<C-p>",      "<CMD>Telescope find_files<CR>" },
       { "<leader>lg", "<CMD>cd $HOME/dotfiles | Telescope live_grep<CR>" },
       { "<leader>of", "<CMD>Telescope oldfiles<CR>" },
+      { "<leader>fs", "<CMD>Telescope grep_string<CR>"} -- Install ripgrep
     },
     tag = '0.1.5',
     dependencies = { 'nvim-lua/plenary.nvim' },
