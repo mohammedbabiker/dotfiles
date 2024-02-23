@@ -1,4 +1,5 @@
 return {
+  -- Install the language server with Mason
   {
     "williamboman/mason.nvim",
     cmd = "Mason", -- load mason when running :Mason command
@@ -14,6 +15,7 @@ return {
       })
     end,
   },
+  -- Enable communications between LSP config and Mason
   {
     "williamboman/mason-lspconfig.nvim",
     event = "VeryLazy", -- load this after critical plugins
@@ -21,6 +23,7 @@ return {
       auto_install = true,
     },
   },
+  -- LSP config keybindings and setup for different languages
   {
     "neovim/nvim-lspconfig",
     -- load lsp config when reading a buffer or creating a new one
