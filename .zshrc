@@ -25,6 +25,10 @@ alias ld='exa -lhD --icons=auto' # long list dirs
 alias cl='clear'
 alias ..='cd ..'
 alias cd..='cd ..'
+alias ...="cd ../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+alias .5="cd ../../../../.."
 alias v="nvim"
 alias n="neofetch"
 alias t="timedatectl"
