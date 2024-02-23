@@ -19,9 +19,16 @@ return {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter", -- load cmp after entering insert mode
     -- lazy = false,
+    dependencies = {
+      "hrsh7th/cmp-buffer", -- for buffer completion text
+      "hrsh7th/cmp-path",   -- for file path completion
+    },
     config = function()
       local cmp = require("cmp")
       cmp.setup({
+        completion = {
+          completeopt = "menu,menuone,preview,noselect",
+        },
         window = {
           documentation = cmp.config.window.bordered(),
           completion = cmp.config.window.bordered(),
@@ -43,6 +50,7 @@ return {
           { name = "luasnip" },
         }, {
           { name = "buffer" },
+          { name = "path" },
         }),
       })
     end,
