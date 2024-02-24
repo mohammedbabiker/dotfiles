@@ -65,6 +65,10 @@ return {
       lspconfig.jsonls.setup({
         capabilites = capabilities,
       })
+      lspconfig.emmet_ls.setup({
+        capabilites = capabilities,
+        -- filetypes = { "html", "css", "javascriptreact", "typescriptreact", "javascript", "typescript" },
+      })
 
       vim.keymap.set("n", "I", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
