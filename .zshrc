@@ -38,6 +38,7 @@ alias grep="grep --color=auto"
 alias note="$EDITOR ~/xpad.txt"
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 alias zconf="nvim ~/.zshrc"
+alias cat="bat"
 
 # rm trash
 alias rm="rmtrash"
