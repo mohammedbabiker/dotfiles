@@ -1,0 +1,16 @@
+config
+LSP
+VeryLazy
+filetypes
+css
+javascriptreact
+typescriptreact
+javascript
+lua
+Babiker
+Babai
+SPC
+SessionRestore
+cr
+nvim
+cmp
