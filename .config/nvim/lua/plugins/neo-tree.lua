@@ -1,8 +1,9 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   keys = {
-    { "<C-a>",      "<CMD>Neotree toggle left<CR>" },
+    { "<leader>ne", "<CMD>Neotree filesystem reveal left<CR>" },
     { "<leader>nt", "<CMD>Neotree buffers reveal float<CR>" },
+    { "<leader>nc", "<CMD>Neotree close<CR>" },
   },
   branch = "v3.x",
   dependencies = {
