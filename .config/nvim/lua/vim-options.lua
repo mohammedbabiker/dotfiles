@@ -11,4 +11,6 @@ vim.cmd("set noswapfile")
 vim.cmd("set showmatch")
 vim.cmd("set ignorecase") -- ignore capital late on search
 vim.cmd("set spell")
+vim.cmd("set autoindent")
+vim.cmd("set smartcase")
 --vim.cmd("set spelllang=en_us")
