@@ -1,21 +1,21 @@
 return {
-  -- "rmagatti/auto-session",
-  -- config = function()
-  --   require("auto-session").setup({
-  --     auto_session_suppress_dirs = { "~/", "~/dotfiles/.config/" },
-  --     pre_save_cmds = { NeotreeClose = true },
-  --     session_lens = {
-  --       buftypes_to_ignore = { "nofile", "nowrite" },
-  --       load_on_setup = true,
-  --       theme_conf = { border = true },
-  --       previewer = false,
-  --     },
-  --     vim.keymap.set("n", "<leader>sl", require("auto-session.session-lens").search_session, {
-  --       noremap = true,
-  --     }),
-  --     vim.keymap.set("n", "<leader>ss", "<CMD>SessionSave<CR>", {}),
-  --     vim.keymap.set("n", "<leader>sr", "<CMD>SessionRestore<CR>", {}),
-  --     vim.keymap.set("n", "<leader>sd", "<CMD>SessionDelete<CR>", {}),
-  --   })
-  -- end,
+	-- "rmagatti/auto-session",
+	-- config = function()
+	--   require("auto-session").setup({
+	--     auto_session_suppress_dirs = { "~/", "~/dotfiles/.config/" },
+	--     pre_save_cmds = { NeotreeClose = true },
+	--     session_lens = {
+	--       buftypes_to_ignore = { "nofile", "nowrite" },
+	--       load_on_setup = true,
+	--       theme_conf = { border = true },
+	--       previewer = false,
+	--     },
+	--     vim.keymap.set("n", "<leader>sl", require("auto-session.session-lens").search_session, {
+	--       noremap = true,
+	--     }),
+	--     vim.keymap.set("n", "<leader>ss", "<CMD>SessionSave<CR>", {}),
+	--     vim.keymap.set("n", "<leader>sr", "<CMD>SessionRestore<CR>", {}),
+	--     vim.keymap.set("n", "<leader>sd", "<CMD>SessionDelete<CR>", {}),
+	--   })
+	-- end,
 }
