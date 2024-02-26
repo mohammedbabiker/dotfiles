@@ -10,6 +10,10 @@ return {
 		"rcarriga/nvim-dap-ui",
 		"leoluz/nvim-dap-go",
 	},
+	-- {
+	--   "mxsdev/nvim-dap-vscode-js",
+	--   dependencies = { "mfussenegger/nvim-dap" },
+	-- },
 	config = function()
 		local dap = require("dap")
 		local dapui = require("dapui")
