@@ -1,11 +1,10 @@
 export ZSH="$HOME/.oh-my-zsh"
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_THEME="robbyrussell"
 
 ENABLE_CORRECTION="true"
 
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -18,10 +17,10 @@ else
 fi
 
 # Aliases
-alias l='exa -lh  --icons=auto'
-alias ls="exa" # "exa -1 --icons=auto" # "ls --color=auto"
-alias ll='exa -lha --icons=auto --sort=name --group-directories-first' # long list all
-alias ld='exa -lhD --icons=auto' # long list dirs
+alias l='eza -lh  --icons=auto'
+alias ls="eza" # "exa -1 --icons=auto" # "ls --color=auto"
+alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
+alias ld='eza -lhD --icons=auto' # long list dirs
 alias cl='clear'
 alias ..='cd ..'
 alias cd..='cd ..'
@@ -41,8 +40,8 @@ alias zconf="nvim ~/.zshrc"
 alias cat="bat"
 
 # rm trash
-alias rm="rmtrash"
-alias rmdir="rmdirtrash"
+#alias rm="rmtrash"
+#alias rmdir="rmdirtrash"
 
 # GIT
 alias ga="git add"
@@ -64,9 +63,9 @@ alias tx="tmux new -s"
 alias hz="bat .zsh_history"
 alias hb="bat .bash_history"
 
-source /usr/share/doc/pkgfile/command-not-found.zsh
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+#source /usr/share/doc/pkgfile/command-not-found.zsh
+#source /usr/share/fzf/key-bindings.zsh
+#source /usr/share/fzf/completion.zsh
 
 # bun completions
 [ -s "/home/li/.bun/_bun" ] && source "/home/li/.bun/_bun"
