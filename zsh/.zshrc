@@ -7,6 +7,7 @@ ENABLE_CORRECTION="true"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.bash_profile
 
 export LANG=en_US.UTF-8
 
