@@ -22,3 +22,10 @@ vim.cmd("set clipboard=unnamedplus")
 vim.cmd("set splitright")
 vim.cmd("set splitbelow")
 vim.cmd("set iskeyword+=-") -- dash separated words as a word text object"
+
+-- general keymap
+
+local keymap = vim.keymap
+keymap.set("i", "jk", "<ESC>") -- jk to escape
+keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear highlight
+keymap.set("n", "x", '"-x"') -- dont yank on x
