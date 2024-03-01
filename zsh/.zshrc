@@ -40,7 +40,7 @@ alias t="timedatectl"
 alias rns="systemctl --type=service --state=running"
 alias lsc='ls -l | wc -l' # count files in dir
 alias grep="grep --color=auto"
-alias note="$EDITOR ~/xpad.txt"
+alias note="$EDITOR ~/note.md"
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 alias zconf="nvim ~/.zshrc"
 alias cat="bat"
