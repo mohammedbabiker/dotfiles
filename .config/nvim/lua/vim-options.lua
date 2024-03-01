@@ -39,3 +39,12 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank({ timeout = 200, visual = true })
 	end,
 })
+
+-- Swap between last two buffers
+keymap.set("n", "<leader>'", "<C-^>", { desc = "Switch to last buffer" })
+
+-- save and quit
+keymap.set("n", "<leader>w", "<cmd>w<cr>", { silent = false })
+keymap.set("n", "<leader>z", "<cmd>wqa<cr>", { silent = false })
+keymap.set("n", "<leader>q", "<cmd>q!<cr>", { silent = false })
+
