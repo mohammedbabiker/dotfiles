@@ -16,11 +16,11 @@ source ~/.bash_profile
 
 export LANG=en_US.UTF-8
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='vim'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+export EDITOR='nvim'
+# else
+#   export EDITOR='vim'
+# fi
 
 # Aliases
 alias l='eza -lh  --icons=auto'
