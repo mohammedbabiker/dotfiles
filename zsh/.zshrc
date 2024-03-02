@@ -26,7 +26,6 @@ export EDITOR='nvim'
 alias l='eza -lh  --icons=auto'
 alias ls="eza" # "exa -1 --icons=auto" # "ls --color=auto"
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
-alias ld='eza -lhD --icons=auto' # long list dirs
 alias cl='clear'
 alias ..='cd ..'
 alias cd..='cd ..'
@@ -35,8 +34,6 @@ alias .3="cd ../../.."
 alias .4="cd ../../../.."
 alias .5="cd ../../../../.."
 alias v="nvim"
-alias n="neofetch"
-alias t="timedatectl"
 alias rns="systemctl --type=service --state=running"
 alias lsc='ls -l | wc -l' # count files in dir
 alias grep="grep --color=auto"
@@ -44,6 +41,7 @@ alias note="$EDITOR ~/note.md"
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 alias zconf="nvim ~/.zshrc"
 alias cat="bat"
+alias o="open ." # open current dir in file manager
 
 # rm trash
 #alias rm="rmtrash"
