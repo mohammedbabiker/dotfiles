@@ -1,0 +1,7 @@
+[user]
+	name = mohammedbabiker
+	email = mobabikerbabai20@gmail.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
