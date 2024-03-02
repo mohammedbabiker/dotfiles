@@ -22,6 +22,9 @@ vim.cmd("set clipboard=unnamedplus")
 vim.cmd("set splitright")
 vim.cmd("set splitbelow")
 vim.cmd("set iskeyword+=-") -- dash separated words as a word text object"
+vim.cmd("set conceallevel=2")
+vim.cmd("set inccommand=split")
+vim.cmd("set virtualedit=block")
 
 -- general keymap
 
