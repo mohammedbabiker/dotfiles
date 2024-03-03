@@ -51,3 +51,9 @@ keymap.set("n", "<leader>w", "<cmd>w<cr>", { silent = false })
 keymap.set("n", "<leader>z", "<cmd>wqa<cr>", { silent = false })
 keymap.set("n", "<leader>q", "<cmd>q!<cr>", { silent = false })
 
+-- Press 'S' for quick find/replace for the word under the cursor
+keymap.set({ "n", "v" }, "<C-s>", function()
+	local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
+	local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
+	vim.api.nvim_feedkeys(keys, "n", false)
+end)
