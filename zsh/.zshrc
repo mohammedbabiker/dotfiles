@@ -36,12 +36,15 @@ alias .5="cd ../../../../.."
 alias v="nvim"
 alias rns="systemctl --type=service --state=running"
 alias lsc='ls -l | wc -l' # count files in dir
-alias grep="grep --color=auto"
 alias note="$EDITOR ~/note.md"
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 alias zconf="nvim ~/.zshrc"
+
+
+alias grep="grep --color=auto"
 alias cat="bat"
 alias o="open ." # open current dir in file manager
+alias man="tldr"
 
 # rm trash
 #alias rm="rmtrash"
@@ -87,3 +90,4 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(atuin init zsh)"
