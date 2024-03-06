@@ -5,13 +5,6 @@ return {
 	},
 	{
 		"nvim-telescope/telescope.nvim",
-		keys = { -- only load the plugin when these keys are pressed:
-			{ "<C-p>", "<CMD>Telescope find_files<CR>" },
-			{ "<leader>lg", "<CMD>cd $HOME/dotfiles | Telescope live_grep<CR>" },
-			{ "<leader>of", "<CMD>Telescope oldfiles<CR>" },
-			{ "<leader>fs", "<CMD>Telescope grep_string<CR>" }, -- Install ripgrep
-			{ "<leader>fg", "<CMD>Telescope git_files<CR>" },
-		},
 		tag = "0.1.5",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
@@ -31,6 +24,14 @@ return {
 				},
 				hidden = true,
 			})
+
+			local builtin = require("telescope.builtin")
+			vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+			vim.keymap.set("n", "<leader>lg", builtin.live_grep, {}) -- cd $HOME/dotfiles |
+			vim.keymap.set("n", "<leader>of", builtin.oldfiles, {})
+			vim.keymap.set("n", "<leader>fs", builtin.grep_string, {})
+			vim.keymap.set("n", "<leader>fg", builtin.git_files, {})
+
 			require("telescope").load_extension("ui-select")
 		end,
 	},
