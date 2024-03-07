@@ -1,0 +1,12 @@
+[user]
+	name = Mohammed Babiker
+	email = mobabikerbabai20@gmail.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

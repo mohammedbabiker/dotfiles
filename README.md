@@ -1,12 +1,12 @@
 # dotfiles
 
-> Open For Any Suggestions
+<!-- > Open For Any Suggestions -->
+<!---->
+<!-- ## Screenshot -->
+<!---->
+<!-- ![image](./assets/screenshot1.png) -->
 
-## Screenshot
-
-![image](./assets/screenshot1.png)
-
-## Installations
+#### Installations
 
 ```sh
 # Install with stow
@@ -16,11 +16,7 @@ cd dotfiles
 stow .
 ```
 
-## Credits
-
-Inspired by
+#### Credits
 
 - [Stephan Raabe](https://gitlab.com/stephan-raabe/dotfiles)
-- [Roshan Paudel](https://github.com/hyper-dot/Arch-Hyprland)
-- [SolDoesTech](https://github.com/SolDoesTech/hyprland)
 - [Chris Power](https://github.com/cpow/neovim-for-newbs) `nvim`
