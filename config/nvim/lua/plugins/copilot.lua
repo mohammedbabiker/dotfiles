@@ -1,5 +1,6 @@
 return {
 	"github/copilot.vim",
+	event = { "BufReadPre", "BufNewFile" },
 	-- altervative
 	-- "Exafunction/codeium.vim",
 	-- event = "BufEnter",
