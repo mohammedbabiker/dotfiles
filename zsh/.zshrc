@@ -64,7 +64,8 @@ alias gla="git log --all --graph"
 alias glz="lazygit"
 
 # tmux
-alias tx="tmux new -s"
+alias tn="tmux new -s"
+alias ta="tmux a -t"
 
 # history
 alias hz="bat .zsh_history"
