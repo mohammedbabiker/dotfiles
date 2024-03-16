@@ -7,15 +7,17 @@ return {
 				theme = "dracula",
 			},
 			sections = {
-				lualine_a = { "mode" },
+				lualine_a = { "filename" },
 				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
-				lualine_x = {
+				lualine_c = {
 					{
 						require("noice").api.statusline.mode.get,
 						cond = require("noice").api.statusline.mode.has,
 					},
-					"encoding",
+					-- "mode",
+				},
+				lualine_x = {
+					-- "encoding",
 					"fileformat",
 					"filetype",
 				},
