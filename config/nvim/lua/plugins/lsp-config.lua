@@ -79,6 +79,10 @@ return {
 				capabilites = capabilities,
 				on_attach = on_attach,
 			})
+			lspconfig.eslint.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
 			lspconfig.tailwindcss.setup({
 				capabilites = capabilities,
 				on_attach = on_attach,
