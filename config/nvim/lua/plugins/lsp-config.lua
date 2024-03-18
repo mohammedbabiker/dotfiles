@@ -33,6 +33,7 @@ return {
 			local opts = { noremap = true, silent = true }
 			local on_attach = function(client, bufnr) -- (client, bufnr)
 				opts.buffer = bufnr
+				opts.client = client
 			end
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
