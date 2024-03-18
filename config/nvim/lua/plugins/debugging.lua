@@ -3,8 +3,8 @@ return {
 	keys = { -- load only when click on keys
 		{ "<leader>dt", "<CMD>DapToggleBreakpoint<CR>" },
 		{ "<leader>dc", "<CMD>DapContinue<CR>" },
-		{ "<F10>", "<CMD>DapStepOver<CR>" },
-		{ "<F12>", "<CMD>DapStepOut<CR>" },
+		{ "<leader>ds", "<CMD>DapStepOver<CR>" },
+		{ "<leader>do", "<CMD>DapStepOut<CR>" },
 	},
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
