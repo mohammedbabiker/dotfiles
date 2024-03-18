@@ -40,6 +40,9 @@ keymap.set("x", "Q", ":norm @q<CR>")
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
+-- paste without yanking
+keymap.set("v", "p", '"_dP')
+
 -- Noice
 keymap.set("n", "<leader>nn", ":NoiceDismiss<CR>", { noremap = true, silent = true })
 
