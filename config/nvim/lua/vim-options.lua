@@ -34,6 +34,8 @@ keymap.set("i", "jk", "<ESC>") -- jk to escape
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear highlight
 keymap.set("n", "x", '"-x"') -- dont yank on x
 
+keymap.set("x", "Q", ":norm @q<CR>")
+
 -- Noice
 keymap.set("n", "<leader>nn", ":NoiceDismiss<CR>", { noremap = true, silent = true })
 
