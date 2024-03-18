@@ -94,7 +94,7 @@ return {
 			lspconfig.emmet_ls.setup({
 				capabilites = capabilities,
 				on_attach = on_attach,
-				-- filetypes = { "html", "css", "javascriptreact", "typescriptreact", "javascript", "typescript" },
+				filetypes = { "html", "css", "javascriptreact", "typescriptreact", "javascript", "typescript" },
 			})
 			-- configure svelte server
 			lspconfig.svelte.setup({
@@ -114,7 +114,7 @@ return {
 			})
 
 			opts.desc = "Show documentation for what is under cursor"
-			vim.keymap.set("n", "I", vim.lsp.buf.hover, opts)
+			vim.keymap.set("n", "<leader>gi", vim.lsp.buf.hover, opts)
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>gr", "<CMD>Telescope lsp_references<CR>", {}) -- show definition, references
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
