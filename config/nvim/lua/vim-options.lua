@@ -36,6 +36,10 @@ keymap.set("n", "x", '"-x"') -- dont yank on x
 
 keymap.set("x", "Q", ":norm @q<CR>")
 
+-- stay in indent mode
+keymap.set("v", "<", "<gv")
+keymap.set("v", ">", ">gv")
+
 -- Noice
 keymap.set("n", "<leader>nn", ":NoiceDismiss<CR>", { noremap = true, silent = true })
 
