@@ -40,6 +40,7 @@ alias note="$EDITOR ~/note.md"
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 alias zconf="nvim ~/.zshrc"
 alias co="cd ~/Code/"
+alias fzf="fzf --preview 'bat --style=numbers --color=always {}' | xargs -n 1 nvim"
 
 
 alias grep="grep --color=auto"
@@ -93,6 +94,10 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(atuin init zsh)"
+
+# fzf
+# eval "$(fzf --zsh)"
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 
 # pnpm
 export PNPM_HOME="/Users/mohammedbabai/Library/pnpm"
