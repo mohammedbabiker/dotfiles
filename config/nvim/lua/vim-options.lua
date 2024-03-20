@@ -40,6 +40,10 @@ keymap.set("x", "Q", ":norm @q<CR>")
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
+-- Move line up and down
+keymap.set("v", "<S-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+keymap.set("v", "<S-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+
 -- paste without yanking
 keymap.set("v", "p", '"_dP')
 
