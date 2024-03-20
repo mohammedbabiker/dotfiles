@@ -26,10 +26,18 @@ return {
 			})
 
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+			vim.keymap.set("n", "<leader>ff", function()
+				builtin.find_files({ hidden = true })
+			end, { desc = "Find files" })
+			vim.keymap.set("n", "<leader>fc", function()
+				builtin.commands(require("telescope.themes").get_dropdown({
+					previewer = false,
+				}))
+			end, { desc = "search commands" })
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {}) -- cd $HOME/dotfiles |
 			vim.keymap.set("n", "<leader>fo", builtin.oldfiles, {})
 			vim.keymap.set("n", "<leader>fs", builtin.grep_string, {})
+			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
 			require("telescope").load_extension("ui-select")
 		end,
