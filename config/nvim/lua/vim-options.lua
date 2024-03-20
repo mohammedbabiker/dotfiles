@@ -50,6 +50,10 @@ keymap.set("v", "p", '"_dP')
 -- Noice
 keymap.set("n", "<leader>nn", ":NoiceDismiss<CR>", { noremap = true, silent = true })
 
+-- gl for oepn links
+
+keymap.set("n", "gl", ":sil !open <cWORD><cr>", { silent = true })
+
 -- show yand highlight
 vim.api.nvim_create_autocmd("TextYankPost", {
 	group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
