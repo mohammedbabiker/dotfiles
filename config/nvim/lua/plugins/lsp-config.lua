@@ -115,9 +115,9 @@ return {
 
 			opts.desc = "Show documentation for what is under cursor"
 			vim.keymap.set("n", "<leader>gi", vim.lsp.buf.hover, opts)
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 			vim.keymap.set("n", "<leader>gr", "<CMD>Telescope lsp_references<CR>", {}) -- show definition, references
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Open code actions" })
 		end,
 	},
 }

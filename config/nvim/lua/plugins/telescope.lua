@@ -34,10 +34,10 @@ return {
 					previewer = false,
 				}))
 			end, { desc = "search commands" })
-			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {}) -- cd $HOME/dotfiles |
-			vim.keymap.set("n", "<leader>fo", builtin.oldfiles, {})
-			vim.keymap.set("n", "<leader>fs", builtin.grep_string, {})
-			vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+			vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" }) -- cd $HOME/dotfiles |
+			vim.keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "Recent files" })
+			vim.keymap.set("n", "<leader>fs", builtin.grep_string, { desc = "Grep string" })
+			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Search in help" })
 
 			require("telescope").load_extension("ui-select")
 		end,

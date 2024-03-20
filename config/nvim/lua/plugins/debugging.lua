@@ -1,10 +1,11 @@
 return {
 	"mfussenegger/nvim-dap",
 	keys = { -- load only when click on keys
-		{ "<leader>dt", "<CMD>DapToggleBreakpoint<CR>" },
-		{ "<leader>dc", "<CMD>DapContinue<CR>" },
-		{ "<leader>ds", "<CMD>DapStepOver<CR>" },
-		{ "<leader>do", "<CMD>DapStepOut<CR>" },
+		{ "<leader>dt", "<CMD>DapToggleBreakpoint<CR>", desc = "Toggle break point" },
+		{ "<leader>dc", "<CMD>DapContinue<CR>", desc = "Dap continue" },
+		{ "<leader>ds", "<CMD>DapStepOver<CR>", desc = "Dap step over" },
+		{ "<leader>di", "<CMD>DapStepInto<CR>", desc = "Dap step into" },
+		{ "<leader>do", "<CMD>DapStepOut<CR>", desc = "Dap step out" },
 	},
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
