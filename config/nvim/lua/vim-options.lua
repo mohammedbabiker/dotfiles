@@ -30,9 +30,9 @@ vim.cmd("set isfname+=@-@")
 -- general keymap
 
 local keymap = vim.keymap
-keymap.set("i", "jk", "<ESC>") -- jk to escape
+keymap.set("i", "jk", "<ESC>")             -- jk to escape
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear highlight
-keymap.set("n", "x", '"-x"') -- dont yank on x
+keymap.set("n", "x", '"-x"')               -- dont yank on x
 
 keymap.set("x", "Q", ":norm @q<CR>")
 
@@ -56,12 +56,12 @@ keymap.set("n", "gl", ":sil !open <cWORD><cr>", { silent = true })
 
 -- show yand highlight
 vim.api.nvim_create_autocmd("TextYankPost", {
-	group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
-	pattern = "*",
-	desc = "Highlight selection on yank",
-	callback = function()
-		vim.highlight.on_yank({ timeout = 200, visual = true })
-	end,
+  group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
+  pattern = "*",
+  desc = "Highlight selection on yank",
+  callback = function()
+    vim.highlight.on_yank({ timeout = 200, visual = true })
+  end,
 })
 
 -- Swap between last two buffers
@@ -74,7 +74,7 @@ keymap.set("n", "<leader>q", "<cmd>q!<cr>", { silent = false })
 
 -- Press 'S' for quick find/replace for the word under the cursor
 keymap.set({ "n", "v" }, "<C-s>", function()
-	local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
-	local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
-	vim.api.nvim_feedkeys(keys, "n", false)
+  local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
+  local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
+  vim.api.nvim_feedkeys(keys, "n", false)
 end)
