@@ -42,4 +42,7 @@ return {
 			require("telescope").load_extension("ui-select")
 		end,
 	},
+        defaults = {
+          path_display = { "smart" }, -- shorten path
+        },
 }
