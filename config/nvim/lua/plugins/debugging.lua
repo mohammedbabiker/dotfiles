@@ -31,8 +31,12 @@ return {
           type = "pwa-node",
           request = "launch",
           name = "Launch file",
+          trace = true,
           program = "${file}",
           cwd = "${workspaceFolder}",
+          rootPath = "${workspaceFolder}",
+          console = "integratedTerminal",
+          internalConsoleOptions = "neverOpen",
           runtimeExecutable = "node",
         },
         {
