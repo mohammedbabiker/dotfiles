@@ -5,6 +5,8 @@
 	editor = nvim
 [init]
 	defaultBranch = main
+[color]
+  ui = auto
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -18,3 +20,7 @@
 [alias]
 	st = status
 	cv = commit
+[help]
+  autocorrect = 1
+[merge]
+  tool = nvim
