@@ -36,6 +36,7 @@ return {
           "emmet_ls",
           "eslint",
           "jsonls",
+          "sqlls",
         },
       })
     end
@@ -125,6 +126,10 @@ return {
         capabilites = capabilities,
         on_attach = on_attach,
         filetypes = { "html", "css", "javascriptreact", "typescriptreact", "javascript", "typescript" },
+      })
+      lspconfig.sqlls.setup({
+        capabilites = capabilities,
+        on_attach = on_attach,
       })
       -- configure svelte server
       lspconfig.svelte.setup({
