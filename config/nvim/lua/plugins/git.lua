@@ -11,6 +11,8 @@ return {
 
 			vim.keymap.set("n", "<leader>gp", "<CMD>Gitsigns preview_hunk<CR>", {})
 			vim.keymap.set("n", "<leader>gt", "<CMD>Gitsigns toggle_current_line_blame<CR>", {})
+      vim.keymap.set("n", "<leader>gf", "<CMD>Gitsigns diffthis<CR>", {})
 		end,
 	},
 }
+
