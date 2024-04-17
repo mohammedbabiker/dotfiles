@@ -53,6 +53,7 @@ return {
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "luasnip" },
+          { name = "vim-dadbod-completion" },
           -- { name = "codeium" },
         }, {
           { name = "buffer" },
@@ -63,6 +64,15 @@ return {
           format = lspkind.cmp_format({
             maxwidth = 50,
             ellipsis_char = "...",
+            menu = {
+              -- TODO replace with icons
+              nvim_lsp = "󱌣",
+              luasnip = "!",
+              nvim_lua = "[api]",
+              vim_dadbod_completion = "",
+              buffer = "",
+              path = "",
+            },
           }),
         },
       })
