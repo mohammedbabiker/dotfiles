@@ -153,6 +153,7 @@ return {
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
       vim.keymap.set("n", "<leader>gr", "<CMD>Telescope lsp_references<CR>", {}) -- show definition, references
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Open code actions" })
+      vim.keymap.set("n", "<leader>gn", vim.lsp.buf.rename, { desc = "Rename" })
     end,
   },
 }
