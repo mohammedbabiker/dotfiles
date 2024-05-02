@@ -36,7 +36,7 @@ alias .5="cd ../../../../.."
 alias v="nvim"
 alias rns="systemctl --type=service --state=running"
 alias lsc='ls -l | wc -l' # count files in dir
-alias note="$EDITOR ~/note.md"
+alias note="$EDITOR ~/Documents/notion/note.md"
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 alias zconf="nvim ~/.zshrc"
 alias co="cd ~/Code/"
