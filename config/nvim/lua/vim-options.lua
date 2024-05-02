@@ -51,7 +51,6 @@ keymap.set("v", "p", '"_dP')
 keymap.set("n", "<leader>nn", ":NoiceDismiss<CR>", { noremap = true, silent = true })
 
 -- gl for oepn links
-
 keymap.set("n", "gl", ":sil !open <cWORD><cr>", { silent = true })
 
 -- show yand highlight
