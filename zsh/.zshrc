@@ -42,6 +42,7 @@ alias zconf="nvim ~/.zshrc"
 alias co="cd ~/Code/"
 alias fzf="fzf --preview 'bat --style=numbers --color=always {}' | xargs -n 1 nvim"
 
+alias bsl="brew services list"
 alias brewup="brew update && brew upgrade && brew cleanup"
 alias brewstart="brew services start"
 alias brewstop="brew services stop"
