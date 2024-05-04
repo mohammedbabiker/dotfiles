@@ -126,6 +126,13 @@ return {
         capabilites = capabilities,
         on_attach = on_attach,
         filetypes = { "html", "css", "javascriptreact", "typescriptreact", "javascript", "typescript" },
+        init_options = {
+          html = {
+            options = {
+              ["bem.enabled"] = true,
+            },
+          },
+        }
       })
       lspconfig.sqlls.setup({
         capabilites = capabilities,
