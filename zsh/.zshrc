@@ -2,7 +2,7 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 
 ENABLE_CORRECTION="true"
 
