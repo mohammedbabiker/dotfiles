@@ -75,8 +75,8 @@ alias hz="bat .zsh_history"
 alias hb="bat .bash_history"
 
 #source /usr/share/doc/pkgfile/command-not-found.zsh
-#source /usr/share/fzf/key-bindings.zsh
-#source /usr/share/fzf/completion.zsh
+source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+source /opt/homebrew/opt/fzf/shell/completion.zsh
 
 # bun completions
 [ -s "/home/li/.bun/_bun" ] && source "/home/li/.bun/_bun"
