@@ -37,6 +37,7 @@ return {
           "eslint",
           "jsonls",
           "sqlls",
+          "pyright",
         },
       })
     end
@@ -133,6 +134,11 @@ return {
             },
           },
         }
+      })
+      lspconfig.pyright.setup({
+        capabilites = capabilities,
+        on_attach = on_attach,
+        filetypes = { "python" },
       })
       lspconfig.sqlls.setup({
         capabilites = capabilities,
