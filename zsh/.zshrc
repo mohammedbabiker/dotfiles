@@ -81,6 +81,7 @@ source /opt/homebrew/opt/fzf/shell/completion.zsh
 # bun completions
 [ -s "/home/li/.bun/_bun" ] && source "/home/li/.bun/_bun"
 
+# the fuck
 eval $(thefuck --alias)
 
 # bun
@@ -91,7 +92,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # fzf
 # eval "$(fzf --zsh)"
