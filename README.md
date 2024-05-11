@@ -19,4 +19,4 @@ stow .
 #### Credits
 
 - [Stephan Raabe](https://gitlab.com/stephan-raabe/dotfiles)
-- [Chris Power](https://github.com/cpow/neovim-for-newbs) `nvim`
+- [Chris Power](https://github.com/cpow/neovim-for-newbs)
