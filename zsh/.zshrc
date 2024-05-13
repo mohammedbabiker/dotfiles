@@ -40,9 +40,9 @@ alias co="cd ~/Code/"
 alias fzf="fzf --preview 'bat --style=numbers --color=always {}' | xargs -n 1 nvim"
 
 alias bsl="brew services list"
-alias brewup="brew update && brew upgrade && brew cleanup"
-alias brewstart="brew services start"
-alias brewstop="brew services stop"
+alias bup="brew update && brew upgrade && brew cleanup"
+alias bstart="brew services start"
+alias bstop="brew services stop"
 
 alias grep="grep --color=auto"
 alias cat="bat"
