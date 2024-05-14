@@ -96,7 +96,8 @@ eval "$(atuin init zsh --disable-up-arrow)"
 
 # fzf
 # eval "$(fzf --zsh)"
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
+export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --no-ignore --strip-cwd-prefix --exclude .git "
+export FZF_COMPLETION_OPTS='--border --info=inline'
 
 # pnpm
 export PNPM_HOME="/Users/mohammedbabai/Library/pnpm"
