@@ -122,3 +122,6 @@ zle -N zle-keymap-select
 
 # Start with beam shape cursor on zsh startup and after every command.
 zle-line-init() { zle-keymap-select 'beam'}
+
+# pass
+# source /opt/homebrew/opt/pass/etc/bash_completion.d/pass
