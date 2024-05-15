@@ -3,8 +3,11 @@
 	email = mobabikerbabai20@gmail.com
 [core]
 	editor = nvim
+  pager = delta
 [init]
 	defaultBranch = main
+[color]
+  ui = auto
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -15,3 +18,19 @@
 	aiOpenAIKeyOption = butlerAPI
 	aiOpenAIModelName = gpt-3.5-turbo
 	aiAnthropicKeyOption = butlerAPI
+[alias]
+	st = status
+	cv = commit
+[help]
+  autocorrect = 1
+[merge]
+  tool = nvim
+  conflictstyle = diff3
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true    # N, n move between diff sections
+  side-by-side = true
+  dark = true
+[diff]
+  colorMoved = default

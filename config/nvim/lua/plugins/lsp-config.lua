@@ -36,6 +36,8 @@ return {
           "emmet_ls",
           "eslint",
           "jsonls",
+          "sqlls",
+          "pyright",
         },
       })
     end
@@ -125,6 +127,22 @@ return {
         capabilites = capabilities,
         on_attach = on_attach,
         filetypes = { "html", "css", "javascriptreact", "typescriptreact", "javascript", "typescript" },
+        init_options = {
+          html = {
+            options = {
+              ["bem.enabled"] = true,
+            },
+          },
+        }
+      })
+      lspconfig.pyright.setup({
+        capabilites = capabilities,
+        on_attach = on_attach,
+        filetypes = { "python" },
+      })
+      lspconfig.sqlls.setup({
+        capabilites = capabilities,
+        on_attach = on_attach,
       })
       -- configure svelte server
       lspconfig.svelte.setup({
@@ -148,6 +166,7 @@ return {
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
       vim.keymap.set("n", "<leader>gr", "<CMD>Telescope lsp_references<CR>", {}) -- show definition, references
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Open code actions" })
+      vim.keymap.set("n", "<leader>gn", vim.lsp.buf.rename, { desc = "Rename" })
     end,
   },
 }

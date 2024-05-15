@@ -1,11 +1,8 @@
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 export ZSH="$HOME/.oh-my-zsh"
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 
 ENABLE_CORRECTION="true"
 
@@ -23,8 +20,8 @@ export EDITOR='nvim'
 # fi
 
 # Aliases
-alias l='eza -lh  --icons=auto'
-alias ls="eza" # "exa -1 --icons=auto" # "ls --color=auto"
+alias l='eza -lh  --icons=auto --color=never'
+alias ls="eza --icons=auto --color=never " # "exa -1 --icons=auto" # "ls --color=auto"
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias cl='clear'
 alias ..='cd ..'
@@ -36,12 +33,16 @@ alias .5="cd ../../../../.."
 alias v="nvim"
 alias rns="systemctl --type=service --state=running"
 alias lsc='ls -l | wc -l' # count files in dir
-alias note="$EDITOR ~/note.md"
+alias note="$EDITOR ~/Documents/notion/note.md"
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 alias zconf="nvim ~/.zshrc"
 alias co="cd ~/Code/"
 alias fzf="fzf --preview 'bat --style=numbers --color=always {}' | xargs -n 1 nvim"
 
+alias bsl="brew services list"
+alias bup="brew update && brew upgrade && brew cleanup"
+alias bstart="brew services start"
+alias bstop="brew services stop"
 
 alias grep="grep --color=auto"
 alias cat="bat"
@@ -74,12 +75,13 @@ alias hz="bat .zsh_history"
 alias hb="bat .bash_history"
 
 #source /usr/share/doc/pkgfile/command-not-found.zsh
-#source /usr/share/fzf/key-bindings.zsh
-#source /usr/share/fzf/completion.zsh
+source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+source /opt/homebrew/opt/fzf/shell/completion.zsh
 
 # bun completions
 [ -s "/home/li/.bun/_bun" ] && source "/home/li/.bun/_bun"
 
+# the fuck
 eval $(thefuck --alias)
 
 # bun
@@ -89,15 +91,13 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # fzf
 # eval "$(fzf --zsh)"
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
+export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --no-ignore --strip-cwd-prefix --exclude .git "
+export FZF_COMPLETION_OPTS='--border --info=inline'
 
 # pnpm
 export PNPM_HOME="/Users/mohammedbabai/Library/pnpm"
@@ -106,3 +106,22 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# bat
+export BAT_THEME=gruvbox-dark
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ $KEYMAP == vicmd ]] || [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ $KEYMAP == main ]] || [[ $KEYMAP == viins ]] || [[ $KEYMAP = '' ]] || [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+
+# Start with beam shape cursor on zsh startup and after every command.
+zle-line-init() { zle-keymap-select 'beam'}
+
+# pass
+# source /opt/homebrew/opt/pass/etc/bash_completion.d/pass
