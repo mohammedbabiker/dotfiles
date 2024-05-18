@@ -53,6 +53,9 @@ keymap.set("n", "<leader>nn", ":NoiceDismiss<CR>", { noremap = true, silent = tr
 -- gl for oepn links
 keymap.set("n", "gl", ":sil !open <cWORD><cr>", { silent = true })
 
+-- comment
+keymap.set("n", "<leader>h", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end)
+
 -- show yand highlight
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),

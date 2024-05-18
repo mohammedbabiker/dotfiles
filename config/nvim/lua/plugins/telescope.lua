@@ -51,6 +51,7 @@ return {
       vim.keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "Recent files" })
       vim.keymap.set("n", "<leader>fs", builtin.grep_string, { desc = "Grep string" })
       vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Search in help" })
+      vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "show buffers" })
 
       require("telescope").load_extension("ui-select")
     end,

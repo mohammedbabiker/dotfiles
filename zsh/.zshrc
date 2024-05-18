@@ -39,6 +39,9 @@ alias zconf="nvim ~/.zshrc"
 alias co="cd ~/Code/"
 alias fzf="fzf --preview 'bat --style=numbers --color=always {}' | xargs -n 1 nvim"
 
+alias copy="pbcopy"
+alias past="pbpaste"
+
 alias bsl="brew services list"
 alias bup="brew update && brew upgrade && brew cleanup"
 alias bstart="brew services start"
@@ -48,6 +51,7 @@ alias grep="grep --color=auto"
 alias cat="bat"
 alias o="open ." # open current dir in file manager
 alias man="tldr"
+alias task="taskell"
 
 # rm trash
 #alias rm="rmtrash"
