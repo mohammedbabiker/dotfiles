@@ -1,5 +1,3 @@
-let mapleader = " "
-
 set undodir=.undo/,~/.undo/,/tmp//
 
 set noerrorbells
@@ -15,8 +13,6 @@ set relativenumber
 set nocompatible
 
 filetype on
-
-filetype plugin on
 
 filetype indent on
 
@@ -64,8 +60,6 @@ set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 
 set hlsearch
 
-set history=1000
-
 set cursorline
 
 set smarttab
@@ -77,15 +71,6 @@ set nohlsearch
 set autoindent
 
 set backspace=indent,eol,start
-
-" copy to system clipboard via <Ctrl-c> in visual mode.
-vnoremap <C-c> "+y
-" select all
-nnoremap <C-a> ggVG
-" close window
-nnoremap <C-q> :q<CR>
-" save file
-nnoremap <C-s> :wa<CR>  
 
 " fix jump list
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
