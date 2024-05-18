@@ -51,6 +51,7 @@ alias grep="grep --color=auto"
 alias cat="bat"
 alias o="open ." # open current dir in file manager
 alias man="tldr"
+alias task="taskell"
 
 # rm trash
 #alias rm="rmtrash"
