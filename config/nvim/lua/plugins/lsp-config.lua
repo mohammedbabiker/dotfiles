@@ -84,6 +84,28 @@ return {
             description = "organize Imports",
           },
         },
+        settings = {
+          typescript = {
+            inlayHints = {
+              includeInlayEnumMemberValueHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayParameterNamaHints = "all",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+              includeInlayVariableTypeHints = true,
+            }
+          },
+          javascript = {
+            inlayHints = {
+              includeInlayEnumMemberValueHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayParameterNamaHints = "all",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+              includeInlayVariableTypeHints = true,
+            }
+          }
+        }
       })
       lspconfig.html.setup({ -- html
         capabilites = capabilities,
