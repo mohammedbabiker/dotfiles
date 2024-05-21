@@ -2,11 +2,12 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_THEME=""
 
 ENABLE_CORRECTION="true"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+plugins=(git zsh-autosuggestions pass docker brew web-search)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
