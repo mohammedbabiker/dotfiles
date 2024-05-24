@@ -54,7 +54,7 @@ set updatetime=50
 
 colorscheme habamax 
 
-"highlight Normal ctermbg=256
+highlight Normal ctermbg=256
 
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 
@@ -116,5 +116,5 @@ inoremap <expr> " ConditionalPairMap('"', '"')
 inoremap <expr> $ ConditionalPairMap('$', '$')
 
 
-map <C-f> <Nop>
-nmap <C-f> ggVG=<C-o><C-o>
+"map <C-f> <Nop>
+"nmap <C-f> ggVG=<C-o><C-o>
