@@ -23,6 +23,7 @@ export EDITOR='nvim'
 # Aliases
 alias l='eza -lh  --icons=auto --color=never'
 alias ls="eza --icons=auto --color=never " # "exa -1 --icons=auto" # "ls --color=auto"
+alias lt="eza --tree --level=2 --long --icons --git"
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias cl='clear'
 alias ..='cd ..'
