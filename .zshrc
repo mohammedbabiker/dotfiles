@@ -55,6 +55,9 @@ alias o="open ." # open current dir in file manager
 alias man="tldr"
 alias task="taskell ~/Documents/"
 
+# docker
+alias ddd="ddev drush"
+
 # rm trash
 #alias rm="rmtrash"
 #alias rmdir="rmdirtrash"
@@ -131,3 +134,7 @@ zle-line-init() { zle-keymap-select 'beam'}
 
 # pass
 # source /opt/homebrew/opt/pass/etc/bash_completion.d/pass
+
+# zoxide
+eval "$(zoxide init zsh)"
+
