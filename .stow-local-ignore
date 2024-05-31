@@ -1,0 +1,10 @@
+\.git
+misc
+LICENSE
+^/.*\.org
+README.md
+.DS_Store
+CONTRIBUTING.md
+.github
+.install
+assets
