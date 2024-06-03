@@ -12,7 +12,7 @@
 # Install with stow
 
 git clone https://github.com/mohammedbabiker/dotfiles.git ~/.dotfiles
-cd dotfiles
+cd .dotfiles
 stow .
 ```
 
