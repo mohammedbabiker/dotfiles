@@ -36,7 +36,6 @@ return {
           "emmet_ls",
           "eslint",
           "jsonls",
-          "sqlls",
           "pyright",
         },
       })
@@ -161,10 +160,6 @@ return {
         capabilites = capabilities,
         on_attach = on_attach,
         filetypes = { "python" },
-      })
-      lspconfig.sqlls.setup({
-        capabilites = capabilities,
-        on_attach = on_attach,
       })
       -- configure svelte server
       lspconfig.svelte.setup({
