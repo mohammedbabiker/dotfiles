@@ -75,6 +75,10 @@ alias glo="git log --oneline"
 alias gla="git log --all --graph"
 alias glz="lazygit"
 
+# gh
+autoload -U compinit
+compinit -i
+
 # tmux
 alias tn="tmux new -s"
 alias ta="tmux a -t"
