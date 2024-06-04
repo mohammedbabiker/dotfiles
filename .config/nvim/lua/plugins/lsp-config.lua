@@ -31,7 +31,7 @@ return {
           "html",
           "cssls",
           "tailwindcss",
-          "svelte",
+          -- "svelte",
           "lua_ls",
           "emmet_ls",
           "eslint",
@@ -162,21 +162,21 @@ return {
         filetypes = { "python" },
       })
       -- configure svelte server
-      lspconfig.svelte.setup({
-        capabilities = capabilities,
-        on_attach = function(client, bufnr)
-          on_attach(client, bufnr)
-
-          vim.api.nvim_create_autocmd("BufWritePost", {
-            pattern = { "*.js", "*.ts" },
-            callback = function(ctx)
-              if client.name == "svelte" then
-                client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
-              end
-            end,
-          })
-        end,
-      })
+      -- lspconfig.svelte.setup({
+      --   capabilities = capabilities,
+      --   on_attach = function(client, bufnr)
+      --     on_attach(client, bufnr)
+      --
+      --     vim.api.nvim_create_autocmd("BufWritePost", {
+      --       pattern = { "*.js", "*.ts" },
+      --       callback = function(ctx)
+      --         if client.name == "svelte" then
+      --           client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
+      --         end
+      --       end,
+      --     })
+      --   end,
+      -- })
 
       opts.desc = "Show documentation for what is under cursor"
       vim.keymap.set("n", "<leader>gi", vim.lsp.buf.hover, opts)
