@@ -57,6 +57,7 @@ alias task="taskell ~/Documents/"
 
 # docker
 alias ddd="ddev drush"
+alias dlz="lazydocker"
 
 # rm trash
 #alias rm="rmtrash"
