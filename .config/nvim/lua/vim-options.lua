@@ -51,13 +51,13 @@ keymap.set("v", "p", '"_dP')
 -- Noice
 keymap.set("n", "<leader>nn", ":NoiceDismiss<CR>", { noremap = true, silent = true })
 
--- gl for oepn links
+-- gl for open links
 keymap.set("n", "gl", ":sil !open <cWORD><cr>", { silent = true })
 
 -- comment
 keymap.set("n", "<leader>h", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end)
 
--- show yand highlight
+-- show yank highlight
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
   pattern = "*",
@@ -75,7 +75,7 @@ keymap.set("n", "<leader>w", "<cmd>w<cr>", { silent = false })
 keymap.set("n", "<leader>z", "<cmd>wqa<cr>", { silent = false })
 keymap.set("n", "<leader>q", "<cmd>q!<cr>", { silent = false })
 
--- Press 'S' for quick find/replace for the word under the cursor
+-- Press 'control s' for quick find/replace for the word under the cursor
 keymap.set({ "n", "v" }, "<C-s>", function()
   local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gIc<Left><Left><Left><Left>"
   local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
