@@ -35,13 +35,9 @@
   dark = true
 [diff]
   colorMoved = default
+	submodule = log
 [rerere]
 	enabled = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[commit]
-	template = /Users/mohammedbabai/.stCommitMsg
+	autoupdate = true
+[diff "word"]
+	textconv = doc2text
