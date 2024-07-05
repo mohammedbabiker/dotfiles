@@ -37,6 +37,8 @@ return {
           "eslint",
           "jsonls",
           "pyright",
+          "dockerls",
+          "yamlls",
         },
       })
     end
@@ -177,6 +179,14 @@ return {
       --     })
       --   end,
       -- })
+      lspconfig.dockerls.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+      })
+      lspconfig.yamlls.setup({
+        capabilities = capabilities,
+        on_attach = on_attach
+      })
 
       opts.desc = "Show documentation for what is under cursor"
       vim.keymap.set("n", "<leader>gi", vim.lsp.buf.hover, opts)
