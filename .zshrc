@@ -72,7 +72,7 @@ alias gf="git diff"
 alias gm="git checkout main"
 alias gd="git checkout dev"
 alias gst="git status"
-alias glo="git log --oneline"
+alias glo="git log --graph --oneline --decorate"
 alias gla="git log --all --graph"
 alias glz="lazygit"
 
