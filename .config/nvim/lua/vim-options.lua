@@ -53,6 +53,9 @@ keymap.set("n", "<leader>nn", ":NoiceDismiss<CR>", { noremap = true, silent = tr
 -- gl for open links
 keymap.set("n", "gl", ":sil !open <cWORD><cr>", { silent = true })
 
+-- File explore
+keymap.set("n", "<leader>ne", ":Explore<CR>", { silent = true })
+
 -- comment
 keymap.set("n", "<leader>h", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end)
 
