@@ -30,8 +30,6 @@ return {
           "tsserver",
           "html",
           "cssls",
-          "tailwindcss",
-          -- "svelte",
           "lua_ls",
           "emmet_ls",
           "eslint",
@@ -138,10 +136,6 @@ return {
         capabilities = capabilities,
         on_attach = on_attach,
       })
-      lspconfig.tailwindcss.setup({
-        capabilites = capabilities,
-        on_attach = on_attach,
-      })
       lspconfig.jsonls.setup({
         capabilites = capabilities,
         on_attach = on_attach,
@@ -163,22 +157,6 @@ return {
         on_attach = on_attach,
         filetypes = { "python" },
       })
-      -- configure svelte server
-      -- lspconfig.svelte.setup({
-      --   capabilities = capabilities,
-      --   on_attach = function(client, bufnr)
-      --     on_attach(client, bufnr)
-      --
-      --     vim.api.nvim_create_autocmd("BufWritePost", {
-      --       pattern = { "*.js", "*.ts" },
-      --       callback = function(ctx)
-      --         if client.name == "svelte" then
-      --           client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
-      --         end
-      --       end,
-      --     })
-      --   end,
-      -- })
       lspconfig.dockerls.setup({
         capabilities = capabilities,
         on_attach = on_attach
