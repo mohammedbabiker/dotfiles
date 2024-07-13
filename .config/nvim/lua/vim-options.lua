@@ -26,6 +26,7 @@ vim.cmd("set conceallevel=2")
 vim.cmd("set inccommand=split")
 vim.cmd("set virtualedit=block")
 vim.cmd("set isfname+=@-@")
+vim.cmd("let g:netrw_banner = 0")
 
 -- general keymap
 
