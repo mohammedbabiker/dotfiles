@@ -84,3 +84,22 @@ keymap.set({ "n", "v" }, "<C-s>", function()
   local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
   vim.api.nvim_feedkeys(keys, "n", false)
 end)
+-- Define the ConditionalPairMap function
+local function ConditionalPairMap(open, close)
+  local col = vim.fn.col('.') - 1
+  if vim.fn.getline('.'):sub(col, col) == open then
+    return close .. vim.api.nvim_replace_termcodes('<Left>', true, true, true)
+  else
+    return open .. close .. vim.api.nvim_replace_termcodes('<Left>', true, true, true)
+  end
+end
+
+-- Make the function available globally
+_G.ConditionalPairMap = ConditionalPairMap
+
+-- Set up insert mode mappings
+vim.api.nvim_set_keymap('i', '(', 'v:lua.ConditionalPairMap("(", ")")', { expr = true, noremap = true })
+vim.api.nvim_set_keymap('i', '[', 'v:lua.ConditionalPairMap("[", "]")', { expr = true, noremap = true })
+vim.api.nvim_set_keymap('i', '{', 'v:lua.ConditionalPairMap("{", "}")', { expr = true, noremap = true })
+vim.api.nvim_set_keymap('i', '"', 'v:lua.ConditionalPairMap(\'"\', \'"\')', { expr = true, noremap = true })
+vim.api.nvim_set_keymap('i', "'", 'v:lua.ConditionalPairMap("\'", "\'")', { expr = true, noremap = true })
