@@ -28,13 +28,8 @@ return {
       mason_lspconfig.setup({
         ensure_installed = {
           "tsserver",
-          "html",
-          "cssls",
           "lua_ls",
-          "emmet_ls",
-          "eslint",
           "jsonls",
-          "pyright",
           "dockerls",
           "yamlls",
         },
@@ -106,10 +101,6 @@ return {
           }
         }
       })
-      lspconfig.html.setup({ -- html
-        capabilites = capabilities,
-        on_attach = on_attach,
-      })
       lspconfig.lua_ls.setup({ -- lua
         capabilites = capabilities,
         on_attach = on_attach,
@@ -128,34 +119,9 @@ return {
           },
         },
       })
-      lspconfig.cssls.setup({ -- css
-        capabilites = capabilities,
-        on_attach = on_attach,
-      })
-      lspconfig.eslint.setup({
-        capabilities = capabilities,
-        on_attach = on_attach,
-      })
       lspconfig.jsonls.setup({
         capabilites = capabilities,
         on_attach = on_attach,
-      })
-      lspconfig.emmet_ls.setup({
-        capabilites = capabilities,
-        on_attach = on_attach,
-        filetypes = { "html", "css", "javascriptreact", "typescriptreact", "javascript", "typescript" },
-        init_options = {
-          html = {
-            options = {
-              ["bem.enabled"] = true,
-            },
-          },
-        }
-      })
-      lspconfig.pyright.setup({
-        capabilites = capabilities,
-        on_attach = on_attach,
-        filetypes = { "python" },
       })
       lspconfig.dockerls.setup({
         capabilities = capabilities,
