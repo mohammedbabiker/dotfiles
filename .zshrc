@@ -59,6 +59,7 @@ alias task="taskell ~/Documents/"
 alias ddd="ddev drush"
 alias dlz="lazydocker"
 
+alias pg="/Applications/Postgres.app/Contents/Versions/16/bin/psql" -p5432
 # rm trash
 #alias rm="rmtrash"
 #alias rmdir="rmdirtrash"
