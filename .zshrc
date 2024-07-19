@@ -1,30 +1,16 @@
 # confirmations, etc.) must go above this block; everything else may go below.
 
-export ZSH="$HOME/.oh-my-zsh"
-source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-ZSH_THEME=""
-
 ENABLE_CORRECTION="true"
 
-plugins=(git zsh-autosuggestions pass docker brew web-search)
-
-source $ZSH/oh-my-zsh.sh
-source ~/.bash_profile
-
-export LANG=en_US.UTF-8
-
-# if [[ -n $SSH_CONNECTION ]]; then
-export EDITOR='nvim'
-# else
-#   export EDITOR='vim'
-# fi
+# gh
+autoload -U compinit
+compinit -i
 
 # Aliases
 alias l='eza -lh  --icons=auto --color=never'
 alias ls="eza --icons=auto --color=never " # "exa -1 --icons=auto" # "ls --color=auto"
 alias lt="eza --tree --level=2 --long --icons --git"
-alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
+alias ll='eza -lha --icons=auto --sort=name --group-directories-first --color=never' # long list all
 alias cl='clear'
 alias ..='cd ..'
 alias cd..='cd ..'
@@ -38,7 +24,6 @@ alias lsc='ls -l | wc -l' # count files in dir
 alias note="$EDITOR ~/Documents/notion/note.md"
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 alias zconf="nvim ~/.zshrc"
-alias co="cd ~/Code/"
 alias fzf="fzf --preview 'bat --style=numbers --color=always {}' | xargs -n 1 nvim"
 
 alias copy="pbcopy"
@@ -59,10 +44,8 @@ alias task="taskell ~/Documents/"
 alias ddd="ddev drush"
 alias dlz="lazydocker"
 
+# Postgres
 alias pg="/Applications/Postgres.app/Contents/Versions/16/bin/psql" -p5432
-# rm trash
-#alias rm="rmtrash"
-#alias rmdir="rmdirtrash"
 
 # GIT
 alias ga="git add"
@@ -77,10 +60,6 @@ alias glo="git log --graph --oneline --decorate"
 alias gla="git log --all --graph"
 alias glz="lazygit"
 
-# gh
-autoload -U compinit
-compinit -i
-
 # tmux
 alias tn="tmux new -s"
 alias ta="tmux a -t"
@@ -89,41 +68,24 @@ alias ta="tmux a -t"
 alias hz="bat .zsh_history"
 alias hb="bat .bash_history"
 
-#source /usr/share/doc/pkgfile/command-not-found.zsh
-source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
-source /opt/homebrew/opt/fzf/shell/completion.zsh
-
-# bun completions
-[ -s "/home/li/.bun/_bun" ] && source "/home/li/.bun/_bun"
-
 # the fuck
 eval $(thefuck --alias)
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# Zoxide
+eval "$(zoxide init zsh)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+# Starship
+eval "$(starship init zsh)"
 
+# Atuin
 eval "$(atuin init zsh --disable-up-arrow)"
 
-# fzf
-# eval "$(fzf --zsh)"
-export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --no-ignore --strip-cwd-prefix --exclude .git "
-export FZF_COMPLETION_OPTS='--border --info=inline'
-
-# pnpm
-export PNPM_HOME="/Users/mohammedbabai/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# bat
-export BAT_THEME=gruvbox-dark
+source ~/.bash_profile
+source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+source /opt/homebrew/opt/fzf/shell/completion.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -138,9 +100,28 @@ zle -N zle-keymap-select
 # Start with beam shape cursor on zsh startup and after every command.
 zle-line-init() { zle-keymap-select 'beam'}
 
-# pass
-# source /opt/homebrew/opt/pass/etc/bash_completion.d/pass
+# pnpm
+export PNPM_HOME="/Users/mohammedbabai/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 
-# zoxide
-eval "$(zoxide init zsh)"
+# default
+export LANG=en_US.UTF-8
+export EDITOR='nvim'
 
+# Bat
+export BAT_THEME=gruvbox-dark
+
+# Bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# fzf
+export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --no-ignore --strip-cwd-prefix --exclude .git "
+export FZF_COMPLETION_OPTS='--border --info=inline'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
