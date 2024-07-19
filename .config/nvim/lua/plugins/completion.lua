@@ -6,7 +6,6 @@ return {
       "rafamadriz/friendly-snippets",
       "saadparwaiz1/cmp_luasnip",
       "onsails/lspkind.nvim",
-      -- "Exafunction/codeium.nvim",
     },
     config = function()
       require("luasnip.loaders.from_vscode").lazy_load()
@@ -53,7 +52,6 @@ return {
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "luasnip" },
-          -- { name = "codeium" },
         }, {
           { name = "buffer" },
           { name = "path" },
