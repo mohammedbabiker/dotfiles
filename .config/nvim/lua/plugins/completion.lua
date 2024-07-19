@@ -5,7 +5,6 @@ return {
     dependencies = {
       "rafamadriz/friendly-snippets",
       "saadparwaiz1/cmp_luasnip",
-      "onsails/lspkind.nvim",
     },
     config = function()
       require("luasnip.loaders.from_vscode").lazy_load()
@@ -21,12 +20,10 @@ return {
     event = "InsertEnter", -- load cmp after entering insert mode
     -- lazy = false,
     dependencies = {
-      "hrsh7th/cmp-buffer", -- for buffer completion text
-      "hrsh7th/cmp-path",   -- for file path completion
+      "hrsh7th/cmp-path", -- for file path completion
     },
     config = function()
       local cmp = require("cmp")
-      local lspkind = require("lspkind")
       cmp.setup({
         completion = {
           completeopt = "menu,menuone,preview,noselect",
@@ -53,24 +50,8 @@ return {
           { name = "nvim_lsp" },
           { name = "luasnip" },
         }, {
-          { name = "buffer" },
           { name = "path" },
         }),
-        -- configure lspkind for vs-code like pictograms in completion menu
-        formatting = {
-          format = lspkind.cmp_format({
-            maxwidth = 50,
-            ellipsis_char = "...",
-            menu = {
-              -- TODO replace with icons
-              nvim_lsp = "󱌣",
-              luasnip = "!",
-              nvim_lua = "[api]",
-              buffer = "",
-              path = "",
-            },
-          }),
-        },
       })
     end,
   },
