@@ -1,4 +1,4 @@
--- options
+--# options
 
 vim.g.mapleader = " "
 vim.cmd("set expandtab")
@@ -28,7 +28,7 @@ vim.cmd("set virtualedit=block")
 vim.cmd("set isfname+=@-@")
 vim.cmd("let g:netrw_banner = 0")
 
--- general keymap
+--# general keymap
 
 local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>")             -- jk to escape
@@ -60,16 +60,6 @@ keymap.set("n", "<leader>ne", ":Explore<CR>", { silent = true })
 -- comment
 keymap.set("n", "<leader>h", function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end)
 
--- show yank highlight
-vim.api.nvim_create_autocmd("TextYankPost", {
-  group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
-  pattern = "*",
-  desc = "Highlight selection on yank",
-  callback = function()
-    vim.highlight.on_yank({ timeout = 200, visual = true })
-  end,
-})
-
 -- Swap between last two buffers
 keymap.set("n", "<leader>'", "<C-^>", { desc = "Switch to last buffer" })
 
@@ -84,6 +74,19 @@ keymap.set({ "n", "v" }, "<C-s>", function()
   local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
   vim.api.nvim_feedkeys(keys, "n", false)
 end)
+
+--# Function
+
+-- show yank highlight
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
+  pattern = "*",
+  desc = "Highlight selection on yank",
+  callback = function()
+    vim.highlight.on_yank({ timeout = 200, visual = true })
+  end,
+})
+
 -- Define the ConditionalPairMap function
 local function ConditionalPairMap(open, close)
   local col = vim.fn.col('.') - 1
