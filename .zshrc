@@ -1,5 +1,9 @@
 # confirmations, etc.) must go above this block; everything else may go below.
 
+# case-insensitive completions
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+autoload -Uz compinit && compinit
+
 ENABLE_CORRECTION="true"
 
 # gh
