@@ -25,8 +25,7 @@ alias lt="eza --tree --level=2 --long --icons --git"
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first --color=never' # long list all
 alias cl='clear'
 alias ..='cd ..'
-alias cd..='cd ..'
-alias ...="cd ../.."
+alias .2="cd ../.."
 alias .3="cd ../../.."
 alias .4="cd ../../../.."
 alias .5="cd ../../../../.."
@@ -76,10 +75,6 @@ alias glz="lazygit"
 alias tn="tmux new -s"
 alias ta="tmux a -t"
 
-# history
-alias hz="bat .zsh_history"
-alias hb="bat .bash_history"
-
 # the fuck
 eval $(thefuck --alias)
 
@@ -93,11 +88,10 @@ eval "$(starship init zsh)"
 eval "$(atuin init zsh --disable-up-arrow)"
 
 source ~/.bash_profile
-source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
 source /opt/homebrew/opt/fzf/shell/completion.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /opt/homebrew/opt/fzf/shell/key-bindings.zsh # use atuin instead
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -122,6 +116,9 @@ esac
 # default
 export LANG=en_US.UTF-8
 export EDITOR='nvim'
+
+# starship
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # Bat
 export BAT_THEME=gruvbox-dark
