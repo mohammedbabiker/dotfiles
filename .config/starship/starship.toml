@@ -1,0 +1,48 @@
+add_newline = false
+
+format = """
+$username\
+$hostname\
+$directory\
+$docker_context\
+$git_branch\
+$git_status\
+$python\
+$package% """
+
+[username]
+style_user = 'white'
+style_root = 'red'
+format = '[$user]($style)@'
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol$hostname](white) '
+
+[directory]
+style = 'white'
+home_symbol = '~'
+truncation_length = 1
+read_only = ' '
+read_only_style = 'white'
+
+[package]
+disabled = true
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[docker_context]
+
+symbol = '󰡨'
+format = '[$symbol]($style) '
+
+[git_branch]
+format = '[$branch(:$remote_branch)]($style) '
+style = 'white'
+
+[git_status]
+format = '([$all_status$ahead_behind]($style)) '
+style = ' white'
+behind = '⇣${count}'
