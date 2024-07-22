@@ -6,6 +6,14 @@ autoload -Uz compinit && compinit
 
 ENABLE_CORRECTION="true"
 
+HISTSIZE=1000000
+HISTFILE=~/.zsh_history
+SAVEHIST=1000000
+setopt appendhistory
+setopt share_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+
 # gh
 autoload -U compinit
 compinit -i
