@@ -75,9 +75,6 @@ alias glz="lazygit"
 alias tn="tmux new -s"
 alias ta="tmux a -t"
 
-# the fuck
-eval $(thefuck --alias)
-
 # Zoxide
 eval "$(zoxide init zsh)"
 
