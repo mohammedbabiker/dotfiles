@@ -87,7 +87,6 @@ eval "$(atuin init zsh --disable-up-arrow)"
 source ~/.bash_profile
 source /opt/homebrew/opt/fzf/shell/completion.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source /opt/homebrew/opt/fzf/shell/key-bindings.zsh # use atuin instead
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
