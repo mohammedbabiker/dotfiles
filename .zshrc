@@ -51,6 +51,8 @@ alias o="open ." # open current dir in file manager
 alias man="tldr"
 alias task="taskell ~/Documents/"
 
+alias m="make"
+
 # docker
 alias ddd="ddev drush"
 alias dlz="lazydocker"
