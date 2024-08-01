@@ -1,5 +1,7 @@
 private
 .config/tmux/plugins/
+.config/nvim/spell/en.utf-8.add
+.config/nvim/spell/en.utf-8.add.spl
 
 node_modules
 bower_components
