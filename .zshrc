@@ -26,7 +26,6 @@ alias l='eza -lh  --icons=auto --color=never'
 alias ls="eza --icons=auto --color=never " # "exa -1 --icons=auto" # "ls --color=auto"
 alias lt="eza --tree --level=2 --long --icons --git"
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first --color=never' # long list all
-alias cl='clear'
 alias ..='cd ..'
 alias .2="cd ../.."
 alias .3="cd ../../.."
@@ -89,7 +88,6 @@ eval "$(starship init zsh)"
 # Atuin
 eval "$(atuin init zsh --disable-up-arrow)"
 
-source ~/.bash_profile
 source /opt/homebrew/opt/fzf/shell/completion.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -130,7 +128,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # fzf
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --no-ignore --strip-cwd-prefix --exclude .git "
 export FZF_COMPLETION_OPTS='--border --info=inline'
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
