@@ -33,7 +33,7 @@ vim.cmd("let g:netrw_banner = 0")
 local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>")             -- jk to escape
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear highlight
-keymap.set("n", "x", '"-x"')               -- dont yank on x
+keymap.set("n", "x", '"-x"')               -- don't yank on x
 
 keymap.set("x", "Q", ":norm @q<CR>")
 
@@ -47,9 +47,6 @@ keymap.set("v", "<S-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 
 -- paste without yanking
 keymap.set("v", "p", '"_dP')
-
--- Noice
-keymap.set("n", "<leader>nn", ":NoiceDismiss<CR>", { noremap = true, silent = true })
 
 -- gl for open links
 keymap.set("n", "gl", ":sil !open <cWORD><cr>", { silent = true })
