@@ -1,8 +1,5 @@
 # confirmations, etc.) must go above this block; everything else may go below.
 
-. "$HOME/.cargo/env"
-. "$HOME/Library/Application Support/org.dfinity.dfx/env"
-
 # case-insensitive completions
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 autoload -Uz compinit && compinit
