@@ -77,6 +77,9 @@ eval "$(zoxide init zsh)"
 # Starship
 eval "$(starship init zsh)"
 
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Atuin
 eval "$(atuin init zsh --disable-up-arrow)"
 
