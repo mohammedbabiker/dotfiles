@@ -49,6 +49,8 @@ alias man="tldr"
 alias m="make"
 
 # docker
+alias dps="docker ps"
+alias dimg="docker images"
 alias ddd="ddev drush"
 alias dlz="lazydocker"
 
@@ -91,3 +93,8 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 # fzf
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --no-ignore --strip-cwd-prefix --exclude .git "
 export FZF_COMPLETION_OPTS='--border --info=inline'
+
+# docker-completions
+fpath=(~/.docker/completions \/usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/5.9/functions)
+autoload -Uz compinit
+compinit
