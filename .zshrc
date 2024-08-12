@@ -32,7 +32,7 @@ alias lsc='ls -l | wc -l' # count files in dir
 alias note="$EDITOR ~/Documents/notion/note.md"
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
 alias zconf="nvim ~/.zshrc"
-alias fzf="fzf --preview 'bat --style=numbers --color=always {}' | xargs -n 1 nvim"
+alias fzf="fzf --preview 'cat -n {}' | xargs -n 1 nvim"
 
 alias copy="pbcopy"
 alias past="pbpaste"
@@ -43,7 +43,6 @@ alias bstart="brew services start"
 alias bstop="brew services stop"
 
 alias grep="grep --color=auto"
-alias cat="bat"
 alias o="open ." # open current dir in file manager
 alias man="tldr"
 
@@ -108,9 +107,6 @@ export EDITOR='nvim'
 
 # starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-
-# Bat
-export BAT_THEME=gruvbox-dark
 
 # Bun
 export BUN_INSTALL="$HOME/.bun"
