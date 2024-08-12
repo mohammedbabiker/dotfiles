@@ -17,10 +17,6 @@ setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
-# gh
-autoload -U compinit
-compinit -i
-
 # Aliases
 alias l='eza -lh  --icons=auto --color=never'
 alias ls="eza --icons=auto --color=never " # "exa -1 --icons=auto" # "ls --color=auto"
