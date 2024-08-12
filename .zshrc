@@ -81,23 +81,12 @@ eval "$(atuin init zsh --disable-up-arrow)"
 source /opt/homebrew/opt/fzf/shell/completion.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# pnpm
-export PNPM_HOME="/Users/mohammedbabai/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
 # default
 export LANG=en_US.UTF-8
 export EDITOR='nvim'
 
 # starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-
-# Bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # fzf
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --no-ignore --strip-cwd-prefix --exclude .git "
