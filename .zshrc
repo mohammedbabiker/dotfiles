@@ -9,13 +9,13 @@ autoload -Uz compinit && compinit
 
 ENABLE_CORRECTION="true"
 
-HISTSIZE=1000000
 HISTFILE=~/.zsh_history
+HISTSIZE=1000000
 SAVEHIST=1000000
 setopt appendhistory
 setopt share_history
-setopt hist_ignore_all_dups
 setopt hist_ignore_space
+setopt hist_ignore_all_dups
 
 # Aliases
 alias l='eza -lh  --icons=auto --color=never'
@@ -26,7 +26,6 @@ alias ..='cd ..'
 alias .2="cd ../.."
 alias .3="cd ../../.."
 alias .4="cd ../../../.."
-alias .5="cd ../../../../.."
 alias v="nvim"
 alias rns="systemctl --type=service --state=running"
 alias lsc='ls -l | wc -l' # count files in dir
@@ -47,16 +46,12 @@ alias grep="grep --color=auto"
 alias cat="bat"
 alias o="open ." # open current dir in file manager
 alias man="tldr"
-alias task="taskell ~/Documents/"
 
 alias m="make"
 
 # docker
 alias ddd="ddev drush"
 alias dlz="lazydocker"
-
-# Postgres
-alias pg="/Applications/Postgres.app/Contents/Versions/16/bin/psql" -p5432
 
 # GIT
 alias ga="git add"
