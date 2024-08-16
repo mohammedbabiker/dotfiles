@@ -24,7 +24,7 @@ format = '[$ssh_symbol$hostname](white) '
 style = 'white'
 home_symbol = '~'
 truncation_length = 1
-read_only = ' '
+read_only = ' 󱅞'
 read_only_style = 'white'
 
 [package]
@@ -34,9 +34,9 @@ disabled = true
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [docker_context]
-
 symbol = '󰡨'
 format = '[$symbol]($style) '
+detect_files = ['compose.yaml', 'docker-compose.yaml', 'Dockerfile']
 
 [git_branch]
 format = '[$branch(:$remote_branch)]($style) '
