@@ -15,10 +15,8 @@ setopt hist_ignore_space
 setopt hist_ignore_all_dups
 
 # Aliases
-alias l='eza -lh  --icons=auto --color=never'
-alias ls="eza --icons=auto --color=never " # "exa -1 --icons=auto" # "ls --color=auto"
-alias lt="eza --tree --level=2 --long --icons --git"
-alias ll='eza -lha --icons=auto --sort=name --group-directories-first --color=never' # long list all
+alias l='ls -F'
+alias ll='ls -lha'
 alias ..='cd ..'
 alias .2="cd ../.."
 alias .3="cd ../../.."
