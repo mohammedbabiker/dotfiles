@@ -41,3 +41,5 @@
 	autoupdate = true
 [diff "word"]
 	textconv = doc2text
+[diff "exif"]
+	textconv = exiftool
