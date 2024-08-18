@@ -83,7 +83,7 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # default
 export LANG=en_US.UTF-8
-export EDITOR='nvim'
+export EDITOR='vim'
 
 # starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
