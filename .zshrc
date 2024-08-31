@@ -46,7 +46,7 @@ alias m="make"
 # docker
 alias dps="docker ps"
 alias dimg="docker images"
-alias ddd="ddev drush"
+alias ddr="ddev drush"
 alias dlz="lazydocker"
 
 # GIT
@@ -58,10 +58,6 @@ alias gst="git status"
 alias glo="git log --graph --oneline --decorate"
 alias gla="git log --all --graph"
 alias glz="lazygit"
-
-# tmux
-alias tn="tmux new -s"
-alias ta="tmux a -t"
 
 # Zoxide
 eval "$(zoxide init zsh)"
