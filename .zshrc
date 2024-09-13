@@ -71,6 +71,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Atuin
 eval "$(atuin init zsh --disable-up-arrow)"
 
+source /Users/mohammedbabai/Code/function/venv.sh
 source /opt/homebrew/opt/fzf/shell/completion.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
