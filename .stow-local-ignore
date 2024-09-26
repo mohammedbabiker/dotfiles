@@ -10,4 +10,5 @@ CONTRIBUTING.md
 assets
 .config/wallpaper
 .config/ly
+.eslintrc.cjs
 backup.sh
