@@ -27,7 +27,7 @@ return {
       local mason_lspconfig = require("mason-lspconfig")
       mason_lspconfig.setup({
         ensure_installed = {
-          "tsserver",
+          "ts_ls",
           "lua_ls",
           "jsonls",
           "dockerls",
@@ -64,7 +64,7 @@ return {
       end
 
       local lspconfig = require("lspconfig") -- language server
-      lspconfig.tsserver.setup({             -- javascript
+      lspconfig.ts_ls.setup({                -- javascript
         capabilites = capabilities,
         on_attach = on_attach,
         init_options = {
