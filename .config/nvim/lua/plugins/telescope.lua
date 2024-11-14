@@ -14,6 +14,12 @@ return {
 
         defaults = {
           path_display = { "smart" }, -- shorten path
+          pickers = {
+            find_files = {
+              hidden = true,
+              theme = "ivy",
+            },
+          },
           mappings = {
             i = {
               ["<C-j>"] = action.move_selection_next,
