@@ -59,12 +59,6 @@ alias glo="git log --graph --oneline --decorate"
 alias gla="git log --all --graph"
 alias glz="lazygit"
 
-# Zoxide
-eval "$(zoxide init zsh)"
-
-# Starship
-eval "$(starship init zsh)"
-
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -90,3 +84,9 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 fpath=(~/.docker/completions \/usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/5.9/functions)
 autoload -Uz compinit
 compinit
+
+# Starship
+eval "$(starship init zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh)"
