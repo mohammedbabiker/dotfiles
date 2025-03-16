@@ -76,6 +76,10 @@ export EDITOR='vim'
 # starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
+# brew
+export HOMEBREW_NO_EMOJI=1
+export HOMEBREW_NO_ENV_HINTS=1
+
 # fzf
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --no-ignore --strip-cwd-prefix --exclude .git "
 export FZF_COMPLETION_OPTS='--border --info=inline'
