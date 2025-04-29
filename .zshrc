@@ -59,19 +59,13 @@ alias glo="git log --graph --oneline --decorate"
 alias gla="git log --all --graph"
 alias glz="lazygit"
 
-# Zoxide
-eval "$(zoxide init zsh)"
-
-# Starship
-eval "$(starship init zsh)"
-
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Atuin
 eval "$(atuin init zsh --disable-up-arrow)"
 
-source /Users/mohammedbabai/Code/function/venv.sh
+source /Users/mohammedbabiker/Code/function/venv.sh
 source /opt/homebrew/opt/fzf/shell/completion.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -82,6 +76,10 @@ export EDITOR='vim'
 # starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
+# brew
+export HOMEBREW_NO_EMOJI=1
+export HOMEBREW_NO_ENV_HINTS=1
+
 # fzf
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --no-ignore --strip-cwd-prefix --exclude .git "
 export FZF_COMPLETION_OPTS='--border --info=inline'
@@ -90,3 +88,9 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 fpath=(~/.docker/completions \/usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/5.9/functions)
 autoload -Uz compinit
 compinit
+
+# Starship
+eval "$(starship init zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh)"
