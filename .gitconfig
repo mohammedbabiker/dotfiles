@@ -1,6 +1,9 @@
 [user]
 	name = Mohammed Babiker
 	email = mobabikerbabai20@gmail.com
+  signingkey = mobabikerbabai20@gmail.com
+[commit]
+  gpgsign = true
 [core]
 	editor = nvim
   pager = delta
