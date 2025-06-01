@@ -1,6 +1,8 @@
 [user]
 	name = Mohammed Babiker
 	email = mobabikerbabai20@gmail.com
+	#signingkey = 5ACB09B940A8EE0D
+	signingkey = mobabikerbabai20@gmail.com
 [core]
 	editor = nvim
   pager = delta
@@ -43,3 +45,7 @@
 	textconv = doc2text
 [diff "exif"]
 	textconv = exiftool
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
