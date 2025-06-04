@@ -39,7 +39,7 @@ alias bstop="brew services stop"
 
 alias grep="grep --color=auto"
 alias o="open ." # open current dir in file manager
-alias man="tldr"
+#alias man="tldr"
 
 alias m="make"
 
