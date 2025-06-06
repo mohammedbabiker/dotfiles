@@ -73,6 +73,9 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 
+# GPG
+export GPG_TTY=$(tty) # Tell GPG to use the current terminal as input/output for passphrase prompts.
+
 # starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
