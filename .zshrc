@@ -96,4 +96,4 @@ compinit
 eval "$(starship init zsh)"
 
 # Zoxide
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"

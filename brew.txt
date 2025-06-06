@@ -23,9 +23,7 @@ postman
 raycast
 starship
 stow
-tldr
 tmux
 visual-studio-code
 zoom
-zoxide
 zsh-autosuggestions
