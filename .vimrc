@@ -18,7 +18,7 @@ set mouse=a                   " Enable mouse in all modes
 " Colors and Highlighting
 syntax on                     " Enable syntax highlighting
 colorscheme habamax           " Set color scheme
-highlight Normal ctermbg=256  " Set background color
+"highlight Normal ctermbg=256  " Set background color
 
 " Indentation and Tabs
 set shiftwidth=2              " Number of spaces for each step of (auto)indent
