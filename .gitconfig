@@ -6,8 +6,27 @@
 	editor = nvim
   pager = delta
 	excludesfile = /Users/mohammedbabai/.gitignore_global
+  whitespace = error  # Treat whitespace errors (like trailing spaces) as errors
+  # compression = 9 # high compression to save space
+  # preloadindex = true # speed up by caching
 [init]
 	defaultBranch = main
+[status]
+  # branch = true # Show current branch in status output
+  showStash = true
+  showUntrackedFiles  = all
+[push]
+  autoSetupRemote = true # auto set remote branch
+  default = current # push only current branch by default
+  followTags  = true
+[pull]
+  default = current
+  rebase  = true # Rebase instead of merge when pulling
+[rebase]
+  autoStash = true
+  missingCommitCheck  = warn
+[log]
+  abbrevCommit  = true # short commits
 [color]
   ui = auto
 [filter "lfs"]
@@ -20,9 +39,6 @@
 	aiOpenAIKeyOption = butlerAPI
 	aiOpenAIModelName = gpt-3.5-turbo
 	aiAnthropicKeyOption = butlerAPI
-[alias]
-	st = status
-	cv = commit
 [help]
   autocorrect = 1
 [merge]
@@ -30,6 +46,7 @@
   conflictstyle = diff3
 [interactive]
   diffFilter = delta --color-only
+  singlekey = true  # no need to Enter after select
 [delta]
   navigate = true    # N, n move between diff sections
   side-by-side = true
@@ -45,6 +62,6 @@
 [diff "exif"]
 	textconv = exiftool
 [commit]
-	gpgsign = true
+	gpgSign = true
 [tag]
 	gpgSign = true
