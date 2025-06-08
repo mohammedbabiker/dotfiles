@@ -50,13 +50,15 @@ alias ddr="ddev drush"
 alias dlz="lazydocker"
 
 # GIT
-alias ga="git add"
+alias ga="git add --patch"
 alias ggl="git pull"
 alias ggp="git push"
 alias gc="git commit"
-alias gst="git status"
+alias gd="git diff"
+alias gst="git status --short"
 alias glo="git log --graph --oneline --decorate"
 alias gla="git log --all --graph"
+alias glp="git log --all --graph --pretty=format:'%C(yellow)%h %C(white) %an %ar%C(auto) %D%n%s%n'"
 alias glz="lazygit"
 
 # homebrew
