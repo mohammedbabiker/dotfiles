@@ -82,7 +82,7 @@ inoremap <expr> [ ConditionalPairMap('[', ']')
 inoremap <expr> ` ConditionalPairMap('`', '`')
 inoremap <expr> ' ConditionalPairMap('''', '''')
 inoremap <expr> " ConditionalPairMap('"', '"')
-inoremap <expr> $ ConditionalPairMap('$', '$')
+"inoremap <expr> $ ConditionalPairMap('$', '$')
 
 " Jump list fixes
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
