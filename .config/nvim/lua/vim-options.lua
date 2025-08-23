@@ -41,12 +41,14 @@ keymap.set("x", "Q", ":norm @q<CR>")
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
+-- paste without yanking
+keymap.set("v", "p", '"_dP')
+
 -- Move line up and down
 keymap.set("v", "<S-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 keymap.set("v", "<S-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 
--- paste without yanking
-keymap.set("v", "p", '"_dP')
+keymap.set("n", "<leader>so", ":update<CR> :source<CR>")
 
 -- gl for open links
 keymap.set("n", "gl", ":sil !open <cWORD><cr>", { silent = true })
