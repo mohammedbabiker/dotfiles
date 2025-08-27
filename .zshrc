@@ -4,6 +4,9 @@
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 autoload -Uz compinit && compinit
 
+# VI Mode
+bindkey -v
+
 ENABLE_CORRECTION="true"
 
 HISTFILE=~/.zsh_history
