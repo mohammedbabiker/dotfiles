@@ -9,6 +9,9 @@
   whitespace = error  # Treat whitespace errors (like trailing spaces) as errors
   # compression = 9 # high compression to save space
   # preloadindex = true # speed up by caching
+[alias]
+  conf = config --global --edit
+  npc = log --oneline --branches --not --remotes # show not pushed commit for reset/revert
 [init]
 	defaultBranch = main
 [status]
