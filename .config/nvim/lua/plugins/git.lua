@@ -18,6 +18,8 @@ return {
         current_line_blame = false, -- show by <leader>gt
       })
 
+      vim.keymap.set("n", "<leader>ga", "<CMD>Gitsigns stage_hunk<CR>", {})
+      vim.keymap.set("n", "<leader>gu", "<CMD>Gitsigns undo_stage_hunk<CR>", {})
       vim.keymap.set("n", "<leader>gp", "<CMD>Gitsigns preview_hunk<CR>", {})
       vim.keymap.set("n", "<leader>gt", "<CMD>Gitsigns toggle_current_line_blame<CR>", {})
       vim.keymap.set("n", "<leader>gf", "<CMD>Gitsigns diffthis<CR>", {})
