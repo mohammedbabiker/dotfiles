@@ -4,7 +4,7 @@
 	signingkey = mobabikerbabai20@gmail.com
 [core]
 	editor = vim
-  pager = delta
+  #pager = delta
 	excludesfile = /Users/mohammedbabai/.gitignore_global
   whitespace = error  # Treat whitespace errors (like trailing spaces) as errors
   # compression = 9 # high compression to save space

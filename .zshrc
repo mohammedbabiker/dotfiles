@@ -29,7 +29,7 @@ alias rns="systemctl --type=service --state=running"
 alias lsc='ls -l | wc -l' # count files in dir
 alias note="$EDITOR ~/Documents/notion/note.md"
 alias cache="du -sh /home/li/.cache && du -sh /var/cache/pacman/pkg"
-alias zconf="nvim ~/.zshrc"
+alias zconf="vim ~/.zshrc"
 alias fzf="fzf --preview 'cat -n {}' | xargs -n 1 nvim"
 
 alias copy="pbcopy"
@@ -68,10 +68,10 @@ alias glz="lazygit"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Atuin
-eval "$(atuin init zsh --disable-up-arrow)"
+#eval "$(atuin init zsh --disable-up-arrow)"
 
 source /Users/mohammedbabiker/dev/function/venv.sh
-source /opt/homebrew/opt/fzf/shell/completion.zsh
+#source /opt/homebrew/opt/fzf/shell/completion.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # default
@@ -98,10 +98,10 @@ autoload -Uz compinit
 compinit
 
 # Starship
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 
 # Zoxide
-eval "$(zoxide init zsh)"
+#eval "$(zoxide init zsh)"
 
 # Terraform completition
 autoload -U +X bashcompinit && bashcompinit
