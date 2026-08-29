@@ -65,12 +65,14 @@ alias glp="git log --all --graph --pretty=format:'%C(yellow)%h %C(white) %an %ar
 alias glz="lazygit"
 
 # homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+
 
 # Atuin
 #eval "$(atuin init zsh --disable-up-arrow)"
 
 source /Users/mohammedbabiker/dev/function/venv.sh
+source /Users/mohammedbabiker/dev/function/aliases.sh
 #source /opt/homebrew/opt/fzf/shell/completion.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
