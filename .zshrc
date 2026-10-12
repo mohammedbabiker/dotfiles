@@ -1,7 +1,10 @@
 # confirmations, etc.) must go above this block; everything else may go below.
 
-# case-insensitive completions
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+# Load Homebrew's Zsh completions
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
 autoload -Uz compinit && compinit
 
 # VI Mode
@@ -69,13 +72,10 @@ alias glz="lazygit"
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
-
 # Atuin
 #eval "$(atuin init zsh --disable-up-arrow)"
 
-source /Users/mohammedbabiker/dev/function/venv.sh
 source /Users/mohammedbabiker/dev/function/aliases.sh
-#source /opt/homebrew/opt/fzf/shell/completion.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # default
@@ -85,9 +85,6 @@ export EDITOR='vim'
 # GPG
 export GPG_TTY=$(tty) # Tell GPG to use the current terminal as input/output for passphrase prompts.
 
-# starship
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-
 # brew
 export HOMEBREW_NO_EMOJI=1
 export HOMEBREW_NO_ENV_HINTS=1
@@ -96,17 +93,11 @@ export HOMEBREW_NO_ENV_HINTS=1
 export FZF_DEFAULT_COMMAND="fd --type file --follow --hidden --no-ignore --strip-cwd-prefix --exclude .git "
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
-# docker-completions
-fpath=(~/.docker/completions \/usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/5.9/functions)
-autoload -Uz compinit
-compinit
+# starship
+#export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
-# Starship
 #eval "$(starship init zsh)"
 
 # Zoxide
 #eval "$(zoxide init zsh)"
 
-# Terraform completition
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
