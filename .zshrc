@@ -51,6 +51,8 @@ alias dps="docker ps"
 alias dimg="docker images"
 alias ddr="ddev drush"
 alias dlz="lazydocker"
+alias dc='docker compose'
+alias dcp='docker compose --profile'
 
 # GIT
 alias ga="git add --patch"
